@@ -1,0 +1,137 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'GPIO[9]'
+Slack : -4.892
+TNS   : -117.699
+
+Type  : Slow 1200mV 85C Model Setup 'GPIO[8]'
+Slack : -3.182
+TNS   : -66.424
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -0.975
+TNS   : -0.975
+
+Type  : Slow 1200mV 85C Model Hold 'GPIO[9]'
+Slack : -1.137
+TNS   : -27.455
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.497
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'GPIO[8]'
+Slack : 0.793
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'GPIO[8]'
+Slack : 0.128
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'GPIO[8]'
+Slack : -0.102
+TNS   : -2.144
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GPIO[8]'
+Slack : -3.481
+TNS   : -51.065
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GPIO[9]'
+Slack : -3.481
+TNS   : -3.481
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -5.974
+
+Type  : Slow 1200mV 0C Model Setup 'GPIO[9]'
+Slack : -4.498
+TNS   : -111.839
+
+Type  : Slow 1200mV 0C Model Setup 'GPIO[8]'
+Slack : -2.739
+TNS   : -56.846
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -0.850
+TNS   : -0.850
+
+Type  : Slow 1200mV 0C Model Hold 'GPIO[9]'
+Slack : -1.002
+TNS   : -23.662
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'GPIO[8]'
+Slack : 0.736
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'GPIO[8]'
+Slack : 0.091
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'GPIO[8]'
+Slack : -0.089
+TNS   : -1.888
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GPIO[8]'
+Slack : -3.481
+TNS   : -51.065
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GPIO[9]'
+Slack : -3.481
+TNS   : -3.481
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -5.974
+
+Type  : Fast 1200mV 0C Model Setup 'GPIO[9]'
+Slack : -1.575
+TNS   : -31.874
+
+Type  : Fast 1200mV 0C Model Setup 'GPIO[8]'
+Slack : -0.845
+TNS   : -10.973
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : 0.184
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'GPIO[9]'
+Slack : -0.761
+TNS   : -19.837
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'GPIO[8]'
+Slack : 0.316
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'GPIO[8]'
+Slack : 0.789
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'GPIO[8]'
+Slack : -0.149
+TNS   : -4.336
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GPIO[8]'
+Slack : -3.000
+TNS   : -48.427
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GPIO[9]'
+Slack : -3.000
+TNS   : -23.071
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -5.052
+
+------------------------------------------------------------

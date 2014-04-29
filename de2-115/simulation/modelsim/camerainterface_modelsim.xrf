@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Ben/eecs392/de2-115/camerainterface.vhd
+source_file = 1, C:/Users/Ben/Google Drive/EECS392/Altera Docs/pin_assignments.qsf
+source_file = 1, C:/Users/Ben/eecs392/de2-115/db/camerainterface.cbx.xml
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = camerainterface
+instance = comp, \camera_clock~output\, camera_clock~output, camerainterface, 1
+instance = comp, \system_clock~input\, system_clock~input, camerainterface, 1
