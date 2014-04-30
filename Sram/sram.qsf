@@ -1,0 +1,197 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2012 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 32-bit
+# Version 12.1 Build 177 11/07/2012 SJ Web Edition
+# Date created = 14:14:17  April 22, 2014
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		sram_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C35F672C6
+set_global_assignment -name TOP_LEVEL_ENTITY sram
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 12.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:14:17  APRIL 22, 2014"
+set_global_assignment -name LAST_QUARTUS_VERSION 12.1
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_AC8 -to ad[17]
+set_location_assignment PIN_AB8 -to ad[16]
+set_location_assignment PIN_Y10 -to ad[15]
+set_location_assignment PIN_W10 -to ad[14]
+set_location_assignment PIN_W8 -to ad[13]
+set_location_assignment PIN_AC7 -to ad[12]
+set_location_assignment PIN_V9 -to ad[11]
+set_location_assignment PIN_V10 -to ad[10]
+set_location_assignment PIN_AD7 -to ad[9]
+set_location_assignment PIN_AD6 -to ad[8]
+set_location_assignment PIN_AF5 -to ad[7]
+set_location_assignment PIN_AE5 -to ad[6]
+set_location_assignment PIN_AD5 -to ad[5]
+set_location_assignment PIN_AD4 -to ad[4]
+set_location_assignment PIN_AC6 -to ad[3]
+set_location_assignment PIN_AC5 -to ad[2]
+set_location_assignment PIN_AF4 -to ad[1]
+set_location_assignment PIN_AE4 -to ad[0]
+set_location_assignment PIN_AC11 -to ce_a_n
+set_location_assignment PIN_N2 -to clk
+set_location_assignment PIN_AD13 -to data_f2s[3]
+set_location_assignment PIN_AF14 -to data_f2s[2]
+set_location_assignment PIN_AE14 -to data_f2s[1]
+set_location_assignment PIN_P25 -to data_f2s[0]
+set_location_assignment PIN_AC10 -to dio_a[15]
+set_location_assignment PIN_AC9 -to dio_a[14]
+set_location_assignment PIN_W12 -to dio_a[13]
+set_location_assignment PIN_W11 -to dio_a[12]
+set_location_assignment PIN_AF8 -to dio_a[11]
+set_location_assignment PIN_AE8 -to dio_a[10]
+set_location_assignment PIN_AF7 -to dio_a[9]
+set_location_assignment PIN_AE7 -to dio_a[8]
+set_location_assignment PIN_Y11 -to dio_a[7]
+set_location_assignment PIN_AA11 -to dio_a[6]
+set_location_assignment PIN_AB10 -to dio_a[5]
+set_location_assignment PIN_AA10 -to dio_a[4]
+set_location_assignment PIN_AA9 -to dio_a[3]
+set_location_assignment PIN_AF6 -to dio_a[2]
+set_location_assignment PIN_AE6 -to dio_a[1]
+set_location_assignment PIN_AD8 -to dio_a[0]
+set_location_assignment PIN_AE9 -to lb_a_n
+set_location_assignment PIN_N25 -to mem
+set_location_assignment PIN_AD10 -to oe_n
+set_location_assignment PIN_AE23 -to ready
+set_location_assignment PIN_N23 -to reset
+set_location_assignment PIN_N26 -to rw
+set_location_assignment PIN_AF9 -to ub_a_n
+set_location_assignment PIN_AE10 -to we_n
+set_location_assignment PIN_W24 -to segment_out[3][6]
+set_location_assignment PIN_U22 -to segment_out[3][5]
+set_location_assignment PIN_Y25 -to segment_out[3][4]
+set_location_assignment PIN_Y26 -to segment_out[3][3]
+set_location_assignment PIN_AA26 -to segment_out[3][2]
+set_location_assignment PIN_AA25 -to segment_out[3][1]
+set_location_assignment PIN_Y23 -to segment_out[3][0]
+set_location_assignment PIN_Y24 -to segment_out[2][6]
+set_location_assignment PIN_AB25 -to segment_out[2][5]
+set_location_assignment PIN_AB26 -to segment_out[2][4]
+set_location_assignment PIN_AC26 -to segment_out[2][3]
+set_location_assignment PIN_AC25 -to segment_out[2][2]
+set_location_assignment PIN_V22 -to segment_out[2][1]
+set_location_assignment PIN_AB23 -to segment_out[2][0]
+set_location_assignment PIN_AB24 -to segment_out[1][6]
+set_location_assignment PIN_AA23 -to segment_out[1][5]
+set_location_assignment PIN_AA24 -to segment_out[1][4]
+set_location_assignment PIN_Y22 -to segment_out[1][3]
+set_location_assignment PIN_W21 -to segment_out[1][2]
+set_location_assignment PIN_V21 -to segment_out[1][1]
+set_location_assignment PIN_V20 -to segment_out[1][0]
+set_location_assignment PIN_V13 -to segment_out[0][6]
+set_location_assignment PIN_V14 -to segment_out[0][5]
+set_location_assignment PIN_AE11 -to segment_out[0][4]
+set_location_assignment PIN_AD11 -to segment_out[0][3]
+set_location_assignment PIN_AC12 -to segment_out[0][2]
+set_location_assignment PIN_AB12 -to segment_out[0][1]
+set_location_assignment PIN_AF10 -to segment_out[0][0]
+set_location_assignment PIN_N9 -to segments_out8[6]
+set_location_assignment PIN_P9 -to segments_out8[5]
+set_location_assignment PIN_L7 -to segments_out8[4]
+set_location_assignment PIN_L6 -to segments_out8[3]
+set_location_assignment PIN_L9 -to segments_out8[2]
+set_location_assignment PIN_L2 -to segments_out8[1]
+set_location_assignment PIN_L3 -to segments_out8[0]
+set_location_assignment PIN_M4 -to segments_out9[6]
+set_location_assignment PIN_M5 -to segments_out9[5]
+set_location_assignment PIN_M3 -to segments_out9[4]
+set_location_assignment PIN_M2 -to segments_out9[3]
+set_location_assignment PIN_P3 -to segments_out9[2]
+set_location_assignment PIN_P4 -to segments_out9[1]
+set_location_assignment PIN_R2 -to segments_out9[0]
+set_location_assignment PIN_R3 -to segments_out10[6]
+set_location_assignment PIN_R4 -to segments_out10[5]
+set_location_assignment PIN_R5 -to segments_out10[4]
+set_location_assignment PIN_T9 -to segments_out10[3]
+set_location_assignment PIN_P7 -to segments_out10[2]
+set_location_assignment PIN_P6 -to segments_out10[1]
+set_location_assignment PIN_T2 -to segments_out10[0]
+set_location_assignment PIN_V2 -to addr[3]
+set_location_assignment PIN_V1 -to addr[2]
+set_location_assignment PIN_U4 -to addr[1]
+set_location_assignment PIN_U3 -to addr[0]
+set_location_assignment PIN_AE22 -to addrdisp
+set_global_assignment -name VHDL_FILE colorROM.vhd
+set_global_assignment -name VHDL_FILE VGA_top_level.vhd
+set_global_assignment -name VHDL_FILE vga_sync.vhd
+set_global_assignment -name VHDL_FILE pixelGenerator.vhd
+set_global_assignment -name SOURCE_FILE colorROM.cmp
+set_global_assignment -name VHDL_FILE ../../College/Softwares/Altera/13.0sp1/lcdcdc.vhd
+set_global_assignment -name VHDL_FILE sram.vhd
+set_global_assignment -name VHDL_FILE sramdec.vhd
+set_location_assignment PIN_A7 -to HORIZ_SYNC
+set_location_assignment PIN_D8 -to VERT_SYNC
+set_location_assignment PIN_D6 -to VGA_BLANK
+set_location_assignment PIN_B12 -to VGA_BLUE[9]
+set_location_assignment PIN_C12 -to VGA_BLUE[8]
+set_location_assignment PIN_B11 -to VGA_BLUE[7]
+set_location_assignment PIN_C11 -to VGA_BLUE[6]
+set_location_assignment PIN_J11 -to VGA_BLUE[5]
+set_location_assignment PIN_J10 -to VGA_BLUE[4]
+set_location_assignment PIN_G12 -to VGA_BLUE[3]
+set_location_assignment PIN_F12 -to VGA_BLUE[2]
+set_location_assignment PIN_J14 -to VGA_BLUE[1]
+set_location_assignment PIN_J13 -to VGA_BLUE[0]
+set_location_assignment PIN_B8 -to VGA_CLK
+set_location_assignment PIN_D12 -to VGA_GREEN[9]
+set_location_assignment PIN_E12 -to VGA_GREEN[8]
+set_location_assignment PIN_D11 -to VGA_GREEN[7]
+set_location_assignment PIN_G11 -to VGA_GREEN[6]
+set_location_assignment PIN_A10 -to VGA_GREEN[5]
+set_location_assignment PIN_B10 -to VGA_GREEN[4]
+set_location_assignment PIN_D10 -to VGA_GREEN[3]
+set_location_assignment PIN_C10 -to VGA_GREEN[2]
+set_location_assignment PIN_A9 -to VGA_GREEN[1]
+set_location_assignment PIN_B9 -to VGA_GREEN[0]
+set_location_assignment PIN_E10 -to VGA_RED[9]
+set_location_assignment PIN_F11 -to VGA_RED[8]
+set_location_assignment PIN_H12 -to VGA_RED[7]
+set_location_assignment PIN_H11 -to VGA_RED[6]
+set_location_assignment PIN_A8 -to VGA_RED[5]
+set_location_assignment PIN_C9 -to VGA_RED[4]
+set_location_assignment PIN_D9 -to VGA_RED[3]
+set_location_assignment PIN_G10 -to VGA_RED[2]
+set_location_assignment PIN_F10 -to VGA_RED[1]
+set_location_assignment PIN_C8 -to VGA_RED[0]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
