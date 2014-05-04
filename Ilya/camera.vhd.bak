@@ -1,0 +1,57 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+
+entity camera is
+	port (
+		clk, rst: in std_logic;
+		
+		-- to/from Camera
+		dclk: in std_logic;							-- data clock
+		hblk, vsync: in std_logic;					-- control signals
+		im: in std_logic_vector(7 downto 0);	-- parallel image data
+		extclk: out std_logic						-- clock sent to camera, determines dclk
+	);
+end camera;
+
+architecture arch of camera is
+	-- Cam
+	signal im_next, im_reg : std_logic_vector(7 downto 0);
+	signal pixel_count : unsigned(19 downto 0) := (others=>'0');
+	signal cam_clk : std_logic;
+	--signal counter : unsigned(3 downto 0) := (others=>'0');
+	signal counter : unsigned(25 downto 0) := (others=>'0');
+	signal vblk : std_logic;
+	
+begin
+	reset <= not rst;
+
+	-----------------------------
+	-- CAMERA CONTROLS
+	-----------------------------
+	--vblk <= not vsync;
+	vblk <= vsync;
+	
+	process (dclk,reset,state_reg)
+	begin
+		if reset='0' or state_reg=idle or state_reg=cam1 then
+			pixel_count <= (others=>'0');
+		elsif rising_edge(dclk) then
+			if vblk='1' and hblk='1' then
+				pixel_count <= pixel_count + 1;
+			end if;
+		end if;
+	end process;
+	
+	clock_divide_CAM : process(clk) is
+	begin
+		if (rising_edge(clk)) then
+			counter <= counter + 1;
+			if counter = "0001" then
+				cam_clk <= not cam_clk;
+				counter <= "0000";
+			end if;
+		end if;
+	end process clock_divide_CAM;
+	extclk <= cam_clk;

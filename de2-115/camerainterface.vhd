@@ -6,7 +6,11 @@ use WORK.decoder.all;
 entity camerainterface is 
 port (
 	CLOCK_50 : in std_logic;
-	GPIO : inout std_logic_vector(35 downto 0);
+	cam_pixeldata : in std_logic_vector (7 downto 0);
+	cam_href : in std_logic;
+	cam_vsync : in std_logic;
+	cam_pixelclock : in std_logic;
+	cam_xclock : out std_logic;
 	HEX0 : out std_logic_vector(6 downto 0);
 	HEX1 : out std_logic_vector(6 downto 0);
 	HEX2 : out std_logic_vector(6 downto 0);
@@ -14,7 +18,15 @@ port (
 	HEX4 : out std_logic_vector(6 downto 0);
 	HEX5 : out std_logic_vector(6 downto 0);
 	HEX6 : out std_logic_vector(6 downto 0);
-	HEX7 : out std_logic_vector(6 downto 0)
+	HEX7 : out std_logic_vector(6 downto 0);
+	VGA_R : out std_logic_vector(7 downto 0);
+	VGA_G : out std_logic_vector(7 downto 0);
+	VGA_B : out std_logic_vector(7 downto 0);
+	VGA_CLK : out std_logic;
+	VGA_BLANK_N : out std_logic;
+	VGA_HS : out std_logic;
+	VGA_VS : out std_logic;
+	VGA_SYNC_N : out std_logic
 );
 end entity camerainterface;
 
@@ -29,12 +41,10 @@ architecture camerainterface of camerainterface is
 	signal hex5num : std_logic_vector(3 downto 0);
 	signal hex6num : std_logic_vector(3 downto 0);
 	signal hex7num : std_logic_vector(3 downto 0);
-	signal cam_pixeldata : std_logic_vector (7 downto 0);
-	signal cam_href : std_logic;
-	signal cam_vsync : std_logic;
-	signal cam_pixelclock : std_logic;
 	signal num_x : std_logic_vector(15 downto 0);
 	signal num_y : std_logic_vector(15 downto 0);
+	signal nothing : std_logic_vector(15 downto 0);
+	signal y_signal :std_logic_vector(7 downto 0);
 	
 	component cam  is
 		port(
@@ -43,11 +53,20 @@ architecture camerainterface of camerainterface is
 		href : in std_logic;
 		clock : in std_logic;
 		num_x : out std_logic_vector(15 downto 0);
-		num_y : out std_logic_vector(15 downto 0)
+		num_y : out std_logic_vector(15 downto 0);
+		y_signal : out std_logic_vector(7 downto 0)
 	);
 	end component cam;
 
 begin
+
+
+
+
+
+	
+	
+	
 	hex0decoder : leddcd port map (hex0num, HEX0);
 	hex1decoder : leddcd port map (hex1num, HEX1);
 	hex2decoder : leddcd port map (hex2num, HEX2);
@@ -67,15 +86,22 @@ begin
 	hex0num <= num_y(3 downto 0);
 
 	
-	cam_pixeldata(7 downto 0) <= GPIO(7 downto 0);
-	cam_href <= GPIO(8); --purple
-	cam_vsync <= GPIO(9); -- orange
-	GPIO(10) <= clock_25; 
-	cam_pixelclock <= GPIO(11);
+--	cam_pixeldata(7 downto 0) <= GPIO(7 downto 0);
+--	cam_href <= GPIO(8); --purple
+--	cam_vsync <= GPIO(9); -- orange
+--	GPIO(10) <= clock_25; 
+--	cam_pixelclock <= GPIO(11);
+--	
+--	GPIO(12) <= cam_pixelclock;
+
+	cam_xclock <= clock_25;
 	
-	GPIO(12) <= cam_pixelclock;
 	
-	cam_instance : cam port map(cam_pixeldata, cam_vsync, cam_href, cam_pixelclock, num_x, num_y);
+	--num_x(7 downto 0) <= cam_pixeldata;
+	--num_x(15 downto 8) <= x"00";
+	
+	cam_instance : cam port map(cam_pixeldata, cam_vsync, cam_href, cam_pixelclock, num_x, num_y, y_signal);
+	
 	
 	clock_divide : process(CLOCK_50) is
 	begin

@@ -2,133 +2,193 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'GPIO[9]'
-Slack : -4.892
-TNS   : -117.699
+Type  : Slow 1200mV 85C Model Setup 'cam_pixelclock'
+Slack : -4.707
+TNS   : -139.637
 
-Type  : Slow 1200mV 85C Model Setup 'GPIO[8]'
-Slack : -3.182
-TNS   : -66.424
+Type  : Slow 1200mV 85C Model Setup 'cam_href'
+Slack : -3.237
+TNS   : -66.837
+
+Type  : Slow 1200mV 85C Model Setup 'cam_vsync'
+Slack : -1.328
+TNS   : -14.665
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -0.975
-TNS   : -0.975
+Slack : -0.947
+TNS   : -0.947
 
-Type  : Slow 1200mV 85C Model Hold 'GPIO[9]'
-Slack : -1.137
-TNS   : -27.455
+Type  : Slow 1200mV 85C Model Hold 'cam_pixelclock'
+Slack : 0.485
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
 Slack : 0.497
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'GPIO[8]'
-Slack : 0.793
+Type  : Slow 1200mV 85C Model Hold 'cam_href'
+Slack : 0.497
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Recovery 'GPIO[8]'
-Slack : 0.128
+Type  : Slow 1200mV 85C Model Hold 'cam_vsync'
+Slack : 0.956
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'GPIO[8]'
-Slack : -0.102
-TNS   : -2.144
+Type  : Slow 1200mV 85C Model Recovery 'cam_href'
+Slack : -0.023
+TNS   : -0.046
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GPIO[8]'
-Slack : -3.481
-TNS   : -51.065
+Type  : Slow 1200mV 85C Model Recovery 'cam_pixelclock'
+Slack : 0.037
+TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GPIO[9]'
-Slack : -3.481
-TNS   : -3.481
+Type  : Slow 1200mV 85C Model Removal 'cam_pixelclock'
+Slack : -0.169
+TNS   : -4.396
+
+Type  : Slow 1200mV 85C Model Removal 'cam_href'
+Slack : -0.090
+TNS   : -2.445
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'cam_pixelclock'
+Slack : -3.000
+TNS   : -74.376
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'cam_href'
+Slack : -3.000
+TNS   : -49.097
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'cam_vsync'
+Slack : -3.000
+TNS   : -26.792
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
 TNS   : -5.974
 
-Type  : Slow 1200mV 0C Model Setup 'GPIO[9]'
-Slack : -4.498
-TNS   : -111.839
+Type  : Slow 1200mV 0C Model Setup 'cam_pixelclock'
+Slack : -4.322
+TNS   : -124.126
 
-Type  : Slow 1200mV 0C Model Setup 'GPIO[8]'
-Slack : -2.739
-TNS   : -56.846
+Type  : Slow 1200mV 0C Model Setup 'cam_href'
+Slack : -2.781
+TNS   : -57.188
+
+Type  : Slow 1200mV 0C Model Setup 'cam_vsync'
+Slack : -1.143
+TNS   : -11.569
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -0.850
-TNS   : -0.850
+Slack : -0.824
+TNS   : -0.824
 
-Type  : Slow 1200mV 0C Model Hold 'GPIO[9]'
-Slack : -1.002
-TNS   : -23.662
+Type  : Slow 1200mV 0C Model Hold 'cam_pixelclock'
+Slack : 0.430
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
 Slack : 0.445
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'GPIO[8]'
-Slack : 0.736
+Type  : Slow 1200mV 0C Model Hold 'cam_href'
+Slack : 0.447
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Recovery 'GPIO[8]'
-Slack : 0.091
+Type  : Slow 1200mV 0C Model Hold 'cam_vsync'
+Slack : 0.841
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Removal 'GPIO[8]'
-Slack : -0.089
-TNS   : -1.888
+Type  : Slow 1200mV 0C Model Recovery 'cam_href'
+Slack : -0.079
+TNS   : -0.158
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GPIO[8]'
-Slack : -3.481
-TNS   : -51.065
+Type  : Slow 1200mV 0C Model Recovery 'cam_pixelclock'
+Slack : 0.215
+TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GPIO[9]'
-Slack : -3.481
-TNS   : -3.481
+Type  : Slow 1200mV 0C Model Removal 'cam_pixelclock'
+Slack : -0.185
+TNS   : -4.866
+
+Type  : Slow 1200mV 0C Model Removal 'cam_href'
+Slack : -0.060
+TNS   : -1.635
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'cam_pixelclock'
+Slack : -3.000
+TNS   : -75.728
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'cam_href'
+Slack : -3.000
+TNS   : -49.097
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'cam_vsync'
+Slack : -3.000
+TNS   : -26.792
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
 TNS   : -5.974
 
-Type  : Fast 1200mV 0C Model Setup 'GPIO[9]'
-Slack : -1.575
-TNS   : -31.874
+Type  : Fast 1200mV 0C Model Setup 'cam_pixelclock'
+Slack : -2.279
+TNS   : -46.282
 
-Type  : Fast 1200mV 0C Model Setup 'GPIO[8]'
-Slack : -0.845
-TNS   : -10.973
+Type  : Fast 1200mV 0C Model Setup 'cam_href'
+Slack : -0.851
+TNS   : -12.549
+
+Type  : Fast 1200mV 0C Model Setup 'cam_vsync'
+Slack : -0.799
+TNS   : -10.030
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : 0.184
+Slack : 0.200
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'GPIO[9]'
-Slack : -0.761
-TNS   : -19.837
+Type  : Fast 1200mV 0C Model Hold 'cam_pixelclock'
+Slack : 0.201
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'cam_href'
+Slack : 0.206
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
 Slack : 0.208
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'GPIO[8]'
-Slack : 0.316
+Type  : Fast 1200mV 0C Model Hold 'cam_vsync'
+Slack : 1.167
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Recovery 'GPIO[8]'
-Slack : 0.789
+Type  : Fast 1200mV 0C Model Recovery 'cam_pixelclock'
+Slack : -0.202
+TNS   : -5.279
+
+Type  : Fast 1200mV 0C Model Recovery 'cam_href'
+Slack : 0.673
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Removal 'GPIO[8]'
-Slack : -0.149
-TNS   : -4.336
+Type  : Fast 1200mV 0C Model Removal 'cam_pixelclock'
+Slack : -0.102
+TNS   : -2.690
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GPIO[8]'
-Slack : -3.000
-TNS   : -48.427
+Type  : Fast 1200mV 0C Model Removal 'cam_href'
+Slack : -0.075
+TNS   : -2.138
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GPIO[9]'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'cam_pixelclock'
 Slack : -3.000
-TNS   : -23.071
+TNS   : -57.712
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'cam_href'
+Slack : -3.000
+TNS   : -38.450
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'cam_vsync'
+Slack : -3.000
+TNS   : -24.609
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
