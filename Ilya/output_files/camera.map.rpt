@@ -1,6 +1,6 @@
 Analysis & Synthesis report for camera
-Sun May 04 19:48:47 2014
-Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Fri Apr 25 14:04:40 2014
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -46,24 +46,24 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                    ;
-+------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun May 04 19:48:47 2014      ;
-; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
-; Revision Name                      ; camera                                     ;
-; Top-level Entity Name              ; camera                                     ;
-; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 434                                        ;
-;     Total combinational functions  ; 353                                        ;
-;     Dedicated logic registers      ; 226                                        ;
-; Total registers                    ; 226                                        ;
-; Total pins                         ; 171                                        ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total PLLs                         ; 0                                          ;
-+------------------------------------+--------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Apr 25 14:04:40 2014           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; camera                                          ;
+; Top-level Entity Name              ; camera                                          ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 431                                             ;
+;     Total combinational functions  ; 350                                             ;
+;     Dedicated logic registers      ; 226                                             ;
+; Total registers                    ; 226                                             ;
+; Total pins                         ; 171                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -71,8 +71,9 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
 ; Top-level entity name                                                      ; camera             ; camera             ;
-; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
@@ -111,14 +112,12 @@ applicable agreement for further details.
 ; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
 ; Auto ROM Replacement                                                       ; On                 ; On                 ;
 ; Auto RAM Replacement                                                       ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
 ; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
 ; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
 ; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
 ; Strict RAM Replacement                                                     ; Off                ; Off                ;
 ; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
 ; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
-; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
 ; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
 ; Auto Resource Sharing                                                      ; Off                ; Off                ;
 ; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
@@ -126,7 +125,7 @@ applicable agreement for further details.
 ; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
 ; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
 ; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
 ; Report Parameter Settings                                                  ; On                 ; On                 ;
 ; Report Source Assignments                                                  ; On                 ; On                 ;
 ; Report Connectivity Checks                                                 ; On                 ; On                 ;
@@ -152,63 +151,57 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                       ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------+---------+
-; hex7seg.vhd                      ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/Ilya/hex7seg.vhd       ;         ;
-; camera.vhd                       ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/Ilya/camera.vhd        ;         ;
-; de2_sram_ctrl.vhd                ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/Ilya/de2_sram_ctrl.vhd ;         ;
-; vga_sync2.vhd                    ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/Ilya/vga_sync2.vhd     ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                             ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                      ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+; hex7seg.vhd                      ; yes             ; User VHDL File  ; C:/Users/Ilya/Documents/Altera/Projects/Cam_392/hex7seg.vhd       ;         ;
+; camera.vhd                       ; yes             ; User VHDL File  ; C:/Users/Ilya/Documents/Altera/Projects/Cam_392/camera.vhd        ;         ;
+; de2_sram_ctrl.vhd                ; yes             ; User VHDL File  ; C:/Users/Ilya/Documents/Altera/Projects/Cam_392/de2_sram_ctrl.vhd ;         ;
+; vga_sync2.vhd                    ; yes             ; User VHDL File  ; C:/Users/Ilya/Documents/Altera/Projects/Cam_392/vga_sync2.vhd     ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 434       ;
-;                                             ;           ;
-; Total combinational functions               ; 353       ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 120       ;
-;     -- 3 input functions                    ; 94        ;
-;     -- <=2 input functions                  ; 139       ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 197       ;
-;     -- arithmetic mode                      ; 156       ;
-;                                             ;           ;
-; Total registers                             ; 226       ;
-;     -- Dedicated logic registers            ; 226       ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 171       ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 143       ;
-; Total fan-out                               ; 2225      ;
-; Average fan-out                             ; 2.37      ;
-+---------------------------------------------+-----------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 431   ;
+;                                             ;       ;
+; Total combinational functions               ; 350   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 125   ;
+;     -- 3 input functions                    ; 93    ;
+;     -- <=2 input functions                  ; 132   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 194   ;
+;     -- arithmetic mode                      ; 156   ;
+;                                             ;       ;
+; Total registers                             ; 226   ;
+;     -- Dedicated logic registers            ; 226   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 171   ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 143   ;
+; Total fan-out                               ; 2044  ;
+; Average fan-out                             ; 2.74  ;
++---------------------------------------------+-------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -216,15 +209,15 @@ applicable agreement for further details.
 +------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+
 ; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Library Name ;
 +------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+
-; |camera                      ; 353 (221)         ; 226 (122)    ; 0           ; 0            ; 0       ; 0         ; 171  ; 0            ; |camera                         ; work         ;
-;    |VGA_SYNC2:vga_cont2|     ; 60 (60)           ; 46 (46)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camera|VGA_SYNC2:vga_cont2     ; work         ;
-;    |de2_sram_ctrl:sram_cont| ; 24 (24)           ; 58 (58)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camera|de2_sram_ctrl:sram_cont ; work         ;
+; |camera                      ; 350 (221)         ; 226 (122)    ; 0           ; 0            ; 0       ; 0         ; 171  ; 0            ; |camera                         ; work         ;
+;    |VGA_SYNC2:vga_cont2|     ; 59 (59)           ; 46 (46)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camera|VGA_SYNC2:vga_cont2     ; work         ;
+;    |de2_sram_ctrl:sram_cont| ; 21 (21)           ; 58 (58)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camera|de2_sram_ctrl:sram_cont ; work         ;
 ;    |hex7seg:hex7seg_0|       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camera|hex7seg:hex7seg_0       ; work         ;
 ;    |hex7seg:hex7seg_1|       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camera|hex7seg:hex7seg_1       ; work         ;
 ;    |hex7seg:hex7seg_2|       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camera|hex7seg:hex7seg_2       ; work         ;
 ;    |hex7seg:hex7seg_3|       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camera|hex7seg:hex7seg_3       ; work         ;
 ;    |hex7seg:hex7seg_4|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camera|hex7seg:hex7seg_4       ; work         ;
-;    |hex7seg:hex7seg_5|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camera|hex7seg:hex7seg_5       ; work         ;
+;    |hex7seg:hex7seg_5|       ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camera|hex7seg:hex7seg_5       ; work         ;
 ;    |hex7seg:hex7seg_6|       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camera|hex7seg:hex7seg_6       ; work         ;
 ;    |hex7seg:hex7seg_7|       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camera|hex7seg:hex7seg_7       ; work         ;
 +------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+
@@ -365,10 +358,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sun May 04 19:48:44 2014
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Apr 25 14:04:37 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off camera -c camera
-Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file hex7seg.vhd
     Info (12022): Found design unit 1: hex7seg-combinational
     Info (12023): Found entity 1: hex7seg
@@ -456,7 +449,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDG[6]" is stuck at GND
     Warning (13410): Pin "LEDG[7]" is stuck at GND
     Warning (13410): Pin "led4[1]" is stuck at GND
-Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 613 device resources after synthesis - the final resource count might be different
@@ -464,9 +456,9 @@ Info (21057): Implemented 613 device resources after synthesis - the final resou
     Info (21059): Implemented 141 output pins
     Info (21060): Implemented 16 bidirectional pins
     Info (21061): Implemented 442 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 55 warnings
-    Info: Peak virtual memory: 540 megabytes
-    Info: Processing ended: Sun May 04 19:48:47 2014
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 56 warnings
+    Info: Peak virtual memory: 491 megabytes
+    Info: Processing ended: Fri Apr 25 14:04:40 2014
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
