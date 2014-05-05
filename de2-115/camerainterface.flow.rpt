@@ -1,5 +1,5 @@
 Flow report for camerainterface
-Sun May 04 20:44:04 2014
+Mon May 05 12:15:22 2014
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Sun May 04 20:43:58 2014      ;
+; Flow Status                        ; Successful - Mon May 05 12:15:15 2014      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; camerainterface                            ;
 ; Top-level Entity Name              ; camerainterface                            ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE115F29C8                              ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 304 / 114,480 ( < 1 % )                    ;
+; Total logic elements               ; 287 / 114,480 ( < 1 % )                    ;
 ;     Total combinational functions  ; 274 / 114,480 ( < 1 % )                    ;
 ;     Dedicated logic registers      ; 119 / 114,480 ( < 1 % )                    ;
 ; Total registers                    ; 131                                        ;
-; Total pins                         ; 144 / 529 ( 27 % )                         ;
+; Total pins                         ; 167 / 529 ( 32 % )                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                      ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                            ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/04/2014 20:43:27 ;
+; Start date & time ; 05/05/2014 12:14:41 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; camerainterface     ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 205507042697500.139925420700916       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 205507042697500.139931008105492       ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --             ;
 ; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top            ;
@@ -92,11 +92,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 568 MB              ; 00:00:02                           ;
-; Fitter                    ; 00:00:20     ; 1.8                     ; 1382 MB             ; 00:00:26                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 504 MB              ; 00:00:05                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 610 MB              ; 00:00:04                           ;
-; Total                     ; 00:00:31     ; --                      ; --                  ; 00:00:37                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 564 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:24     ; 1.4                     ; 1385 MB             ; 00:00:29                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 492 MB              ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 619 MB              ; 00:00:05                           ;
+; Total                     ; 00:00:36     ; --                      ; --                  ; 00:00:41                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

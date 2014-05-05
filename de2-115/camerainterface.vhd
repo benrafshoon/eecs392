@@ -6,11 +6,12 @@ use WORK.decoder.all;
 entity camerainterface is 
 port (
 	CLOCK_50 : in std_logic;
-	cam_pixeldata : in std_logic_vector (7 downto 0);
-	cam_href : in std_logic;
-	cam_vsync : in std_logic;
-	cam_pixelclock : in std_logic;
-	cam_xclock : out std_logic;
+	GPIO : inout std_logic_vector(35 downto 0);
+--	cam_pixeldata : in std_logic_vector (7 downto 0);
+--	cam_href : in std_logic;
+--	cam_vsync : in std_logic;
+--	cam_pixelclock : in std_logic;
+--	cam_xclock : out std_logic;
 	HEX0 : out std_logic_vector(6 downto 0);
 	HEX1 : out std_logic_vector(6 downto 0);
 	HEX2 : out std_logic_vector(6 downto 0);
@@ -34,8 +35,8 @@ port (
 	SRAM_HB_N : out std_logic;
 	SRAM_OE_N : out std_logic;
 	SRAM_WE_N : out std_logic;
-	KEY : in std_logic_vector(3 downto 0);
-	test_out : out std_logic
+	KEY : in std_logic_vector(3 downto 0)
+	--test_out : out std_logic
 );
 end entity camerainterface;
 
@@ -130,6 +131,14 @@ END component VGA_SYNC;
 	
 	signal write_sram : std_logic;
 	signal read_sram : std_logic;
+	
+	signal cam_href : std_logic;
+	signal cam_vsync : std_logic;
+	signal cam_pixelclock : std_logic;
+	signal cam_xclock : std_logic;
+	signal cam_pixeldata : std_logic_vector(7 downto 0);
+	
+	signal test_out : std_logic;
 
 begin
 
@@ -152,13 +161,14 @@ begin
 	hex0num <= num_y(3 downto 0);
 
 	
- 	--cam_href <= GPIO(8); --purple
-	--cam_vsync <= GPIO(9); -- orange
-	--GPIO(10) <= clock_25; 
-	--cam_pixelclock <= GPIO(11);
+	cam_pixeldata <= GPIO(7 downto 0);
+ 	cam_href <= GPIO(8); --purple
+	cam_vsync <= GPIO(9); -- orange
+	GPIO(10) <= cam_xclock; 
+	cam_pixelclock <= GPIO(11);
 	
-	--GPIO(12) <= cam_pixelclock;
-
+	GPIO(12) <= cam_pixelclock;
+	GPIO(35) <= test_out;
 	
 	
 	

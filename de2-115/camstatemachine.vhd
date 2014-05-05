@@ -6,7 +6,7 @@ port (
 	clock : in std_logic;
 	camera_eof : in std_logic; --high pulse for end of frame
 	vga_eof : in std_logic; -- high pulse for end of frame
-	copy_new_frame_button : in std_logic;
+	copy_new_frame_button : in std_logic; --active low pulse
 	write_sram : out std_logic;
 	display_sram : out std_logic
 	
