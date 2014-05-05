@@ -1,8 +1,0 @@
-
-State Machine - |sram|state_reg
-Name state_reg.wr2 state_reg.wr1 state_reg.rd2 state_reg.rd1 state_reg.idle 
-state_reg.idle 0 0 0 0 0 
-state_reg.rd1 0 0 0 1 1 
-state_reg.rd2 0 0 1 0 1 
-state_reg.wr1 0 1 0 0 1 
-state_reg.wr2 1 0 0 0 1 

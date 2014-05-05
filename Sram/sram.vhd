@@ -36,7 +36,7 @@ architecture arch of sram is
  type state_type is (idle, rd1, rd2, wr1, wr2);
 
  
- signal state_reg, state_next: state_type;
+ signal xx, state_next: state_type;
  signal data_f2s_sig, data_f2s_reg, data_f2s_next: std_logic_Vector(15 downto 0);
  signal data_s2f_reg, data_S2f_next: std_logic_vector(15 downto 0);
  signal addr_reg, addr_next, addr_sig, addr_sig1: std_logic_vector(17 downto 0);

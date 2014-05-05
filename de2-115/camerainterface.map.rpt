@@ -1,5 +1,5 @@
 Analysis & Synthesis report for camerainterface
-Thu May 01 15:47:23 2014
+Sun May 04 20:43:29 2014
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -13,10 +13,15 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Port Connectivity Checks: "cam:cam_instance"
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. State Machine - |camerainterface|camstatemachine:camstatemachine_instance|current_state
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Port Connectivity Checks: "cam:cam_instance"
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +47,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 01 15:47:23 2014      ;
+; Analysis & Synthesis Status        ; Successful - Sun May 04 20:43:29 2014      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; camerainterface                            ;
 ; Top-level Entity Name              ; camerainterface                            ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 179                                        ;
-;     Total combinational functions  ; 147                                        ;
-;     Dedicated logic registers      ; 96                                         ;
-; Total registers                    ; 96                                         ;
-; Total pins                         ; 98                                         ;
+; Total logic elements               ; 335                                        ;
+;     Total combinational functions  ; 274                                        ;
+;     Dedicated logic registers      ; 129                                        ;
+; Total registers                    ; 129                                        ;
+; Total pins                         ; 144                                        ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -168,60 +173,110 @@ applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                     ; Library ;
 +----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
+; vga_sync.vhd                     ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/de2-115/vga_sync.vhd        ;         ;
 ; decoder.vhd                      ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/de2-115/decoder.vhd         ;         ;
 ; leddcd.vhd                       ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/de2-115/leddcd.vhd          ;         ;
 ; camerainterface.vhd              ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/de2-115/camerainterface.vhd ;         ;
 ; cam.vhd                          ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/de2-115/cam.vhd             ;         ;
+; camstatemachine.vhd              ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/de2-115/camstatemachine.vhd ;         ;
 +----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 179            ;
-;                                             ;                ;
-; Total combinational functions               ; 147            ;
-; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 83             ;
-;     -- 3 input functions                    ; 2              ;
-;     -- <=2 input functions                  ; 62             ;
-;                                             ;                ;
-; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 89             ;
-;     -- arithmetic mode                      ; 58             ;
-;                                             ;                ;
-; Total registers                             ; 96             ;
-;     -- Dedicated logic registers            ; 96             ;
-;     -- I/O registers                        ; 0              ;
-;                                             ;                ;
-; I/O pins                                    ; 98             ;
-; Embedded Multiplier 9-bit elements          ; 0              ;
-; Maximum fan-out node                        ; cam_href~input ;
-; Maximum fan-out                             ; 66             ;
-; Total fan-out                               ; 916            ;
-; Average fan-out                             ; 2.09           ;
-+---------------------------------------------+----------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                        ;
++---------------------------------------------+--------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                ;
++---------------------------------------------+--------------------------------------------------------------------------------------+
+; Estimated Total logic elements              ; 335                                                                                  ;
+;                                             ;                                                                                      ;
+; Total combinational functions               ; 274                                                                                  ;
+; Logic element usage by number of LUT inputs ;                                                                                      ;
+;     -- 4 input functions                    ; 129                                                                                  ;
+;     -- 3 input functions                    ; 70                                                                                   ;
+;     -- <=2 input functions                  ; 75                                                                                   ;
+;                                             ;                                                                                      ;
+; Logic elements by mode                      ;                                                                                      ;
+;     -- normal mode                          ; 193                                                                                  ;
+;     -- arithmetic mode                      ; 81                                                                                   ;
+;                                             ;                                                                                      ;
+; Total registers                             ; 129                                                                                  ;
+;     -- Dedicated logic registers            ; 129                                                                                  ;
+;     -- I/O registers                        ; 0                                                                                    ;
+;                                             ;                                                                                      ;
+; I/O pins                                    ; 144                                                                                  ;
+; Embedded Multiplier 9-bit elements          ; 0                                                                                    ;
+; Maximum fan-out node                        ; camstatemachine:camstatemachine_instance|current_state.wait_for_display_end_pre_copy ;
+; Maximum fan-out                             ; 65                                                                                   ;
+; Total fan-out                               ; 1506                                                                                 ;
+; Average fan-out                             ; 2.13                                                                                 ;
++---------------------------------------------+--------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
-; |camerainterface           ; 147 (1)           ; 96 (1)       ; 0           ; 0            ; 0       ; 0         ; 98   ; 0            ; |camerainterface                    ; work         ;
-;    |cam:cam_instance|      ; 90 (90)           ; 95 (95)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|cam:cam_instance   ; work         ;
-;    |leddcd:hex0decoder|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|leddcd:hex0decoder ; work         ;
-;    |leddcd:hex1decoder|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|leddcd:hex1decoder ; work         ;
-;    |leddcd:hex2decoder|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|leddcd:hex2decoder ; work         ;
-;    |leddcd:hex3decoder|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|leddcd:hex3decoder ; work         ;
-;    |leddcd:hex4decoder|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|leddcd:hex4decoder ; work         ;
-;    |leddcd:hex5decoder|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|leddcd:hex5decoder ; work         ;
-;    |leddcd:hex6decoder|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|leddcd:hex6decoder ; work         ;
-;    |leddcd:hex7decoder|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|leddcd:hex7decoder ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                  ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Library Name ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
+; |camerainterface                              ; 274 (113)         ; 129 (1)      ; 0           ; 0            ; 0       ; 0         ; 144  ; 0            ; |camerainterface                                          ; work         ;
+;    |VGA_SYNC:vga_sync_instance|               ; 59 (59)           ; 45 (45)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|VGA_SYNC:vga_sync_instance               ; work         ;
+;    |cam:cam_instance|                         ; 38 (38)           ; 77 (77)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|cam:cam_instance                         ; work         ;
+;    |camstatemachine:camstatemachine_instance| ; 8 (8)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|camstatemachine:camstatemachine_instance ; work         ;
+;    |leddcd:hex0decoder|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|leddcd:hex0decoder                       ; work         ;
+;    |leddcd:hex1decoder|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|leddcd:hex1decoder                       ; work         ;
+;    |leddcd:hex2decoder|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|leddcd:hex2decoder                       ; work         ;
+;    |leddcd:hex3decoder|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|leddcd:hex3decoder                       ; work         ;
+;    |leddcd:hex4decoder|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|leddcd:hex4decoder                       ; work         ;
+;    |leddcd:hex5decoder|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|leddcd:hex5decoder                       ; work         ;
+;    |leddcd:hex6decoder|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|leddcd:hex6decoder                       ; work         ;
+;    |leddcd:hex7decoder|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|leddcd:hex7decoder                       ; work         ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |camerainterface|camstatemachine:camstatemachine_instance|current_state                                                                                                                                                          ;
++----------------------------------------------+----------------------------------------------+---------------------+---------------------+----------------------------------+-----------------------+---------------------------------------------+
+; Name                                         ; current_state.wait_for_display_end_post_copy ; current_state.copy2 ; current_state.copy1 ; current_state.wait_for_cam_start ; current_state.display ; current_state.wait_for_display_end_pre_copy ;
++----------------------------------------------+----------------------------------------------+---------------------+---------------------+----------------------------------+-----------------------+---------------------------------------------+
+; current_state.wait_for_display_end_pre_copy  ; 0                                            ; 0                   ; 0                   ; 0                                ; 0                     ; 0                                           ;
+; current_state.display                        ; 0                                            ; 0                   ; 0                   ; 0                                ; 1                     ; 1                                           ;
+; current_state.wait_for_cam_start             ; 0                                            ; 0                   ; 0                   ; 1                                ; 0                     ; 1                                           ;
+; current_state.copy1                          ; 0                                            ; 0                   ; 1                   ; 0                                ; 0                     ; 1                                           ;
+; current_state.copy2                          ; 0                                            ; 1                   ; 0                   ; 0                                ; 0                     ; 1                                           ;
+; current_state.wait_for_display_end_post_copy ; 1                                            ; 0                   ; 0                   ; 0                                ; 0                     ; 1                                           ;
++----------------------------------------------+----------------------------------------------+---------------------+---------------------+----------------------------------+-----------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; sram_data_in[0]                                    ; sram_data_in[3]     ; yes                    ;
+; sram_data_in[1]                                    ; sram_data_in[3]     ; yes                    ;
+; sram_data_in[2]                                    ; sram_data_in[3]     ; yes                    ;
+; sram_data_in[3]                                    ; sram_data_in[3]     ; yes                    ;
+; sram_data_in[4]                                    ; sram_data_in[3]     ; yes                    ;
+; sram_data_in[5]                                    ; sram_data_in[3]     ; yes                    ;
+; sram_data_in[6]                                    ; sram_data_in[3]     ; yes                    ;
+; sram_data_in[7]                                    ; sram_data_in[3]     ; yes                    ;
+; Number of user-specified and inferred latches = 8  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++-----------------------------------------+--------------------------------------------+
+; Register name                           ; Reason for Removal                         ;
++-----------------------------------------+--------------------------------------------+
+; VGA_SYNC:vga_sync_instance|video_on_v   ; Merged with VGA_SYNC:vga_sync_instance|eof ;
+; VGA_SYNC:vga_sync_instance|pixel_row[9] ; Stuck at GND due to stuck port data_in     ;
+; cam:cam_instance|current_column[20..30] ; Lost fanout                                ;
+; cam:cam_instance|current_row[16..30]    ; Lost fanout                                ;
+; Total Number of Removed Registers = 28  ;                                            ;
++-----------------------------------------+--------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -229,23 +284,46 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 96    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 129   ;
+; Number of registers using Synchronous Clear  ; 1     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 63    ;
+; Number of registers using Asynchronous Clear ; 43    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 46    ;
+; Number of registers using Clock Enable       ; 48    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cam:cam_instance"                                                                       ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; y_signal ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; cam:cam_instance|second_byte           ; 23      ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |camerainterface|VGA_SYNC:vga_sync_instance|v_count[7] ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; No         ; |camerainterface|SRAM_ADDR                             ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |camerainterface|SRAM_ADDR                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cam:cam_instance"                                                                                      ;
++-------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                    ; Type   ; Severity ; Details                                                                             ;
++-------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; horizontal_size[30..16] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; vertical_size[30..16]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; pixel_count             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -263,9 +341,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu May 01 15:47:21 2014
+    Info: Processing started: Sun May 04 20:43:27 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off camerainterface -c camerainterface
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
+    Info (12022): Found design unit 1: VGA_SYNC-behavioral
+    Info (12023): Found entity 1: VGA_SYNC
 Info (12021): Found 2 design units, including 0 entities, in source file decoder.vhd
     Info (12022): Found design unit 1: decoder
     Info (12022): Found design unit 2: decoder-body
@@ -278,50 +359,78 @@ Info (12021): Found 2 design units, including 1 entities, in source file camerai
 Info (12021): Found 2 design units, including 1 entities, in source file cam.vhd
     Info (12022): Found design unit 1: cam-cam
     Info (12023): Found entity 1: cam
+Info (12021): Found 2 design units, including 1 entities, in source file camtosram.vhd
+    Info (12022): Found design unit 1: camtosram-camtosram
+    Info (12023): Found entity 1: camtosram
+Info (12021): Found 2 design units, including 1 entities, in source file sram16to8.vhd
+    Info (12022): Found design unit 1: sram16to8address-sram16to8address
+    Info (12023): Found entity 1: sram16to8address
+Info (12021): Found 2 design units, including 1 entities, in source file camstatemachine.vhd
+    Info (12022): Found design unit 1: camstatemachine-camstatemachine
+    Info (12023): Found entity 1: camstatemachine
 Info (12127): Elaborating entity "camerainterface" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at camerainterface.vhd(26): used implicit default value for signal "VGA_BLANK_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at camerainterface.vhd(29): used implicit default value for signal "VGA_SYNC_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at camerainterface.vhd(47): object "y_signal" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at camerainterface.vhd(112): object "camera_current_pixel" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at camerainterface.vhd(119): used implicit default value for signal "sram8_low_bar_high" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(226): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(227): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(228): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(256): signal "camera_column" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at camerainterface.vhd(221): inferring latch(es) for signal or variable "sram_data_in", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "sram_data_in[0]" at camerainterface.vhd(221)
+Info (10041): Inferred latch for "sram_data_in[1]" at camerainterface.vhd(221)
+Info (10041): Inferred latch for "sram_data_in[2]" at camerainterface.vhd(221)
+Info (10041): Inferred latch for "sram_data_in[3]" at camerainterface.vhd(221)
+Info (10041): Inferred latch for "sram_data_in[4]" at camerainterface.vhd(221)
+Info (10041): Inferred latch for "sram_data_in[5]" at camerainterface.vhd(221)
+Info (10041): Inferred latch for "sram_data_in[6]" at camerainterface.vhd(221)
+Info (10041): Inferred latch for "sram_data_in[7]" at camerainterface.vhd(221)
+Info (10041): Inferred latch for "sram_data_in[8]" at camerainterface.vhd(221)
+Info (10041): Inferred latch for "sram_data_in[9]" at camerainterface.vhd(221)
+Info (10041): Inferred latch for "sram_data_in[10]" at camerainterface.vhd(221)
+Info (10041): Inferred latch for "sram_data_in[11]" at camerainterface.vhd(221)
+Info (10041): Inferred latch for "sram_data_in[12]" at camerainterface.vhd(221)
+Info (10041): Inferred latch for "sram_data_in[13]" at camerainterface.vhd(221)
+Info (10041): Inferred latch for "sram_data_in[14]" at camerainterface.vhd(221)
+Info (10041): Inferred latch for "sram_data_in[15]" at camerainterface.vhd(221)
 Info (12128): Elaborating entity "leddcd" for hierarchy "leddcd:hex0decoder"
 Info (12128): Elaborating entity "cam" for hierarchy "cam:cam_instance"
-Warning (10541): VHDL Signal Declaration warning at cam.vhd(13): used implicit default value for signal "y_signal" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:vga_sync_instance"
+Info (12128): Elaborating entity "camstatemachine" for hierarchy "camstatemachine:camstatemachine_instance"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[0]" to the node "VGA_R" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[1]" to the node "VGA_R" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[2]" to the node "VGA_R" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[3]" to the node "VGA_R" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[4]" to the node "VGA_R" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[5]" to the node "VGA_R" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[6]" to the node "VGA_R" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[7]" to the node "VGA_R" into an OR gate
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_R[0]" is stuck at GND
-    Warning (13410): Pin "VGA_R[1]" is stuck at GND
-    Warning (13410): Pin "VGA_R[2]" is stuck at GND
-    Warning (13410): Pin "VGA_R[3]" is stuck at GND
-    Warning (13410): Pin "VGA_R[4]" is stuck at GND
-    Warning (13410): Pin "VGA_R[5]" is stuck at GND
-    Warning (13410): Pin "VGA_R[6]" is stuck at GND
-    Warning (13410): Pin "VGA_R[7]" is stuck at GND
-    Warning (13410): Pin "VGA_G[0]" is stuck at GND
-    Warning (13410): Pin "VGA_G[1]" is stuck at GND
-    Warning (13410): Pin "VGA_G[2]" is stuck at GND
-    Warning (13410): Pin "VGA_G[3]" is stuck at GND
-    Warning (13410): Pin "VGA_G[4]" is stuck at GND
-    Warning (13410): Pin "VGA_G[5]" is stuck at GND
-    Warning (13410): Pin "VGA_G[6]" is stuck at GND
-    Warning (13410): Pin "VGA_G[7]" is stuck at GND
-    Warning (13410): Pin "VGA_B[0]" is stuck at VCC
-    Warning (13410): Pin "VGA_B[1]" is stuck at VCC
-    Warning (13410): Pin "VGA_B[2]" is stuck at VCC
-    Warning (13410): Pin "VGA_B[3]" is stuck at VCC
-    Warning (13410): Pin "VGA_B[4]" is stuck at VCC
-    Warning (13410): Pin "VGA_B[5]" is stuck at VCC
-    Warning (13410): Pin "VGA_B[6]" is stuck at VCC
-    Warning (13410): Pin "VGA_B[7]" is stuck at VCC
-    Warning (13410): Pin "VGA_BLANK_N" is stuck at GND
     Warning (13410): Pin "VGA_SYNC_N" is stuck at GND
+    Warning (13410): Pin "SRAM_CE_N" is stuck at GND
+    Warning (13410): Pin "SRAM_LB_N" is stuck at GND
+    Warning (13410): Pin "SRAM_HB_N" is stuck at GND
+    Warning (13410): Pin "SRAM_OE_N" is stuck at GND
+    Warning (13410): Pin "test_out" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 26 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 277 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 12 input pins
-    Info (21059): Implemented 86 output pins
-    Info (21061): Implemented 179 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 31 warnings
-    Info: Peak virtual memory: 553 megabytes
-    Info: Processing ended: Thu May 01 15:47:23 2014
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+Info (21057): Implemented 480 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 16 input pins
+    Info (21059): Implemented 112 output pins
+    Info (21060): Implemented 16 bidirectional pins
+    Info (21061): Implemented 336 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 568 megabytes
+    Info: Processing ended: Sun May 04 20:43:29 2014
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
