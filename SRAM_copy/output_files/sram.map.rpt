@@ -1,5 +1,5 @@
 Analysis & Synthesis report for sram
-Tue May 06 13:05:25 2014
+Tue May 06 14:10:15 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -50,7 +50,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 06 13:05:25 2014           ;
+; Analysis & Synthesis Status        ; Successful - Tue May 06 14:10:15 2014           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; sram                                            ;
 ; Top-level Entity Name              ; sram                                            ;
@@ -463,7 +463,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue May 06 13:05:20 2014
+    Info: Processing started: Tue May 06 14:10:11 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sram -c sram
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file //psf/home/desktop/vga_sram_rx_interface.vhd
@@ -496,47 +496,47 @@ Warning (10541): VHDL Signal Declaration warning at sram.vhd(21): used implicit 
 Warning (10541): VHDL Signal Declaration warning at sram.vhd(22): used implicit default value for signal "segments_out10" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at sram.vhd(23): used implicit default value for signal "segment_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10036): Verilog HDL or VHDL warning at sram.vhd(42): object "rst" assigned a value but never read
-Warning (10492): VHDL Process Statement warning at sram.vhd(137): signal "addr_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at sram.vhd(122): inferring latch(es) for signal or variable "addr_sig", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at sram.vhd(122): inferring latch(es) for signal or variable "data_f2s_next", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at sram.vhd(122): inferring latch(es) for signal or variable "colorAddress", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "colorAddress[0]" at sram.vhd(122)
-Info (10041): Inferred latch for "colorAddress[1]" at sram.vhd(122)
-Info (10041): Inferred latch for "colorAddress[2]" at sram.vhd(122)
-Info (10041): Inferred latch for "data_f2s_next[0]" at sram.vhd(122)
-Info (10041): Inferred latch for "data_f2s_next[1]" at sram.vhd(122)
-Info (10041): Inferred latch for "data_f2s_next[2]" at sram.vhd(122)
-Info (10041): Inferred latch for "data_f2s_next[3]" at sram.vhd(122)
-Info (10041): Inferred latch for "data_f2s_next[4]" at sram.vhd(122)
-Info (10041): Inferred latch for "data_f2s_next[5]" at sram.vhd(122)
-Info (10041): Inferred latch for "data_f2s_next[6]" at sram.vhd(122)
-Info (10041): Inferred latch for "data_f2s_next[7]" at sram.vhd(122)
-Info (10041): Inferred latch for "data_f2s_next[8]" at sram.vhd(122)
-Info (10041): Inferred latch for "data_f2s_next[9]" at sram.vhd(122)
-Info (10041): Inferred latch for "data_f2s_next[10]" at sram.vhd(122)
-Info (10041): Inferred latch for "data_f2s_next[11]" at sram.vhd(122)
-Info (10041): Inferred latch for "data_f2s_next[12]" at sram.vhd(122)
-Info (10041): Inferred latch for "data_f2s_next[13]" at sram.vhd(122)
-Info (10041): Inferred latch for "data_f2s_next[14]" at sram.vhd(122)
-Info (10041): Inferred latch for "data_f2s_next[15]" at sram.vhd(122)
-Info (10041): Inferred latch for "addr_sig[0]" at sram.vhd(122)
-Info (10041): Inferred latch for "addr_sig[1]" at sram.vhd(122)
-Info (10041): Inferred latch for "addr_sig[2]" at sram.vhd(122)
-Info (10041): Inferred latch for "addr_sig[3]" at sram.vhd(122)
-Info (10041): Inferred latch for "addr_sig[4]" at sram.vhd(122)
-Info (10041): Inferred latch for "addr_sig[5]" at sram.vhd(122)
-Info (10041): Inferred latch for "addr_sig[6]" at sram.vhd(122)
-Info (10041): Inferred latch for "addr_sig[7]" at sram.vhd(122)
-Info (10041): Inferred latch for "addr_sig[8]" at sram.vhd(122)
-Info (10041): Inferred latch for "addr_sig[9]" at sram.vhd(122)
-Info (10041): Inferred latch for "addr_sig[10]" at sram.vhd(122)
-Info (10041): Inferred latch for "addr_sig[11]" at sram.vhd(122)
-Info (10041): Inferred latch for "addr_sig[12]" at sram.vhd(122)
-Info (10041): Inferred latch for "addr_sig[13]" at sram.vhd(122)
-Info (10041): Inferred latch for "addr_sig[14]" at sram.vhd(122)
-Info (10041): Inferred latch for "addr_sig[15]" at sram.vhd(122)
-Info (10041): Inferred latch for "addr_sig[16]" at sram.vhd(122)
-Info (10041): Inferred latch for "addr_sig[17]" at sram.vhd(122)
+Warning (10492): VHDL Process Statement warning at sram.vhd(145): signal "addr_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at sram.vhd(130): inferring latch(es) for signal or variable "addr_sig", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at sram.vhd(130): inferring latch(es) for signal or variable "data_f2s_next", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at sram.vhd(130): inferring latch(es) for signal or variable "colorAddress", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "colorAddress[0]" at sram.vhd(130)
+Info (10041): Inferred latch for "colorAddress[1]" at sram.vhd(130)
+Info (10041): Inferred latch for "colorAddress[2]" at sram.vhd(130)
+Info (10041): Inferred latch for "data_f2s_next[0]" at sram.vhd(130)
+Info (10041): Inferred latch for "data_f2s_next[1]" at sram.vhd(130)
+Info (10041): Inferred latch for "data_f2s_next[2]" at sram.vhd(130)
+Info (10041): Inferred latch for "data_f2s_next[3]" at sram.vhd(130)
+Info (10041): Inferred latch for "data_f2s_next[4]" at sram.vhd(130)
+Info (10041): Inferred latch for "data_f2s_next[5]" at sram.vhd(130)
+Info (10041): Inferred latch for "data_f2s_next[6]" at sram.vhd(130)
+Info (10041): Inferred latch for "data_f2s_next[7]" at sram.vhd(130)
+Info (10041): Inferred latch for "data_f2s_next[8]" at sram.vhd(130)
+Info (10041): Inferred latch for "data_f2s_next[9]" at sram.vhd(130)
+Info (10041): Inferred latch for "data_f2s_next[10]" at sram.vhd(130)
+Info (10041): Inferred latch for "data_f2s_next[11]" at sram.vhd(130)
+Info (10041): Inferred latch for "data_f2s_next[12]" at sram.vhd(130)
+Info (10041): Inferred latch for "data_f2s_next[13]" at sram.vhd(130)
+Info (10041): Inferred latch for "data_f2s_next[14]" at sram.vhd(130)
+Info (10041): Inferred latch for "data_f2s_next[15]" at sram.vhd(130)
+Info (10041): Inferred latch for "addr_sig[0]" at sram.vhd(130)
+Info (10041): Inferred latch for "addr_sig[1]" at sram.vhd(130)
+Info (10041): Inferred latch for "addr_sig[2]" at sram.vhd(130)
+Info (10041): Inferred latch for "addr_sig[3]" at sram.vhd(130)
+Info (10041): Inferred latch for "addr_sig[4]" at sram.vhd(130)
+Info (10041): Inferred latch for "addr_sig[5]" at sram.vhd(130)
+Info (10041): Inferred latch for "addr_sig[6]" at sram.vhd(130)
+Info (10041): Inferred latch for "addr_sig[7]" at sram.vhd(130)
+Info (10041): Inferred latch for "addr_sig[8]" at sram.vhd(130)
+Info (10041): Inferred latch for "addr_sig[9]" at sram.vhd(130)
+Info (10041): Inferred latch for "addr_sig[10]" at sram.vhd(130)
+Info (10041): Inferred latch for "addr_sig[11]" at sram.vhd(130)
+Info (10041): Inferred latch for "addr_sig[12]" at sram.vhd(130)
+Info (10041): Inferred latch for "addr_sig[13]" at sram.vhd(130)
+Info (10041): Inferred latch for "addr_sig[14]" at sram.vhd(130)
+Info (10041): Inferred latch for "addr_sig[15]" at sram.vhd(130)
+Info (10041): Inferred latch for "addr_sig[16]" at sram.vhd(130)
+Info (10041): Inferred latch for "addr_sig[17]" at sram.vhd(130)
 Info (12128): Elaborating entity "VGA_top_level" for hierarchy "VGA_top_level:C3"
 Info (12128): Elaborating entity "pixelGenerator" for hierarchy "VGA_top_level:C3|pixelGenerator:videoGen"
 Warning (10036): Verilog HDL or VHDL warning at pixelGenerator.vhd(38): object "pixel_row_int" assigned a value but never read
@@ -713,8 +713,8 @@ Info (21057): Implemented 493 device resources after synthesis - the final resou
     Info (21064): Implemented 30 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 146 warnings
     Info: Peak virtual memory: 507 megabytes
-    Info: Processing ended: Tue May 06 13:05:25 2014
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Processing ended: Tue May 06 14:10:15 2014
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 

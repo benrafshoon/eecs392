@@ -1,0 +1,11 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity sram16to8 is
+port(
+);
+end entity sram16to8;
+
+architecture sram16to8 is
+begin
+end architecture sram16to8;

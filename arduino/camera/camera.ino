@@ -3,9 +3,10 @@
 int power_down = 9;//purple
 int reset = 8;//brown
 
-int cameraAddress = 0x21; //0x21 is the 7 bit address, but the datasheet refers to 8 bit addresses 42 (write)
+//int cameraAddress = 0x21; //0x21 is the 7 bit address, but the datasheet refers to 8 bit addresses 42 (write)
 //43 (read)
 
+int cameraAddress = 0x30;
 
 byte readCameraRegister(byte cameraRegister) {
   Wire.beginTransmission(cameraAddress);
@@ -46,11 +47,19 @@ void setup() {
   Serial.begin(9600);
   Wire.begin();
   
+  writeCameraRegister(0x0C, B00000100);
+  writeCameraRegister(0x12, B01000000);
+  writeCameraRegister(0x11, B10000000);
+  writeCameraRegister(0x8C, B00100000);
+  writeCameraRegister(0x37, 0x91);
+  writeCameraRegister(0x38, 0x12);
+  writeCameraRegister(0x39, 0x43);
+  
+  writeCameraRegister(0x13, B10101111);
+  
+  writeCameraRegister(0x8C, B00100000);
 }
 
 void loop() {
-  readCameraRegister(0x12);
-  writeCameraRegister(0x12, 0x00);
-  readCameraRegister(0x12);
-  delay(1000);
+  
 }

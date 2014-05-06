@@ -1,5 +1,5 @@
 Flow report for sram
-Tue May 06 13:06:12 2014
+Tue May 06 14:11:00 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue May 06 13:06:06 2014           ;
+; Flow Status                        ; Successful - Tue May 06 14:10:54 2014           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; sram                                            ;
 ; Top-level Entity Name              ; sram                                            ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/06/2014 13:05:21 ;
+; Start date & time ; 05/06/2014 14:10:12 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; sram                ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                        ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 121371437866.139939952105068 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 121371437866.139940341202672 ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                           ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                            ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; 16764057                     ; --            ; --          ; Top        ;
@@ -90,11 +90,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 507 MB              ; 00:00:04                           ;
-; Fitter                    ; 00:00:32     ; 1.0                     ; 927 MB              ; 00:00:31                           ;
-; Assembler                 ; 00:00:06     ; 1.0                     ; 441 MB              ; 00:00:06                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 507 MB              ; 00:00:03                           ;
+; Fitter                    ; 00:00:31     ; 1.0                     ; 927 MB              ; 00:00:30                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 437 MB              ; 00:00:06                           ;
 ; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 530 MB              ; 00:00:05                           ;
-; Total                     ; 00:00:47     ; --                      ; --                  ; 00:00:46                           ;
+; Total                     ; 00:00:46     ; --                      ; --                  ; 00:00:44                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

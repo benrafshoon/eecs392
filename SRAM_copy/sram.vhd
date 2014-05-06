@@ -59,9 +59,11 @@ port (CLOCK_50 										: in std_logic;
 		--VGA 
 			VGA_RED, VGA_GREEN, VGA_BLUE 					: out std_logic_vector(9 downto 0); 
 			HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK		: out std_logic);
-			end component;
+end component;
+		
+		
 		begin
- 
+ 	-------------------------------------------------------------------------------------------------------------
     process( clk, reset)
 	     variable addr_int : integer;
 	     variable output_int: integer ;
@@ -90,7 +92,9 @@ port (CLOCK_50 										: in std_logic;
 			   tri_reg<=tri_buf;
 			   we_reg<=we_buf;
 			   oe_reg<=oe_buf;
-				if(rw='0' and ready_Sig='1') then --and ready_Sig='1')
+				
+		-------------------------------------------------------------------------------------------------------------	
+			if(rw='0' and ready_Sig='1') then --and ready_Sig='1')
 				--count<= count +1;
 				addr_sig1<=addr_sig1 + "000000000000000001";
 				data_f2s_sig<=data_f2s_sig + "0000000000000001";
@@ -98,6 +102,7 @@ port (CLOCK_50 										: in std_logic;
 				
 			   
 			end if;
+			
 			if(rw='1' and ready_Sig='1') then
 			if(count>260000) then
 			count<=0;
@@ -119,6 +124,9 @@ port (CLOCK_50 										: in std_logic;
 				
 			end if;
 		end process;
+		
+		-------------------------------------------------------------------------------------------------------------
+		---main process---
 		process(state_reg,mem,rw,dio_a,data_f2s_sig,addr_sig1, data_f2s_reg, data_s2f_reg, addr_reg)
 		
 		begin 
@@ -135,7 +143,7 @@ port (CLOCK_50 										: in std_logic;
 					  --data_f2s_sig<="0000000000000000";
 				  else 
 				     addr_next <= addr_sig  ;
-					  if rw='0' then --write
+				 if rw='0' then --write
 					     data_f2s_next <= data_f2s_sig;
 						 addr_sig<=addr_sig1; 
 						 state_next <= wr1;
@@ -164,9 +172,10 @@ port (CLOCK_50 										: in std_logic;
 				colorAddress<=dio_a(5 downto 3);
 			end case;
 		end process;
-		process (state_next,rst)
 		
-		 
+		-------------------------------------------------------------------------------------------------------------
+		
+		process (state_next,rst) 
 		begin
 		tri_buf <= '1';
 		we_buf <='1';
@@ -198,6 +207,9 @@ port (CLOCK_50 										: in std_logic;
 		  ub_a_n <='0';
 		  lb_a_n <='0';
 		  dio_a <= data_f2s_reg when tri_reg ='0' else ( others => 'Z');
+		
+	
+
 		 --addr_reg<="";
 		 --colorAddress<=dio_a(2 downto 0);
         
