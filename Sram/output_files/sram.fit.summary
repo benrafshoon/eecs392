@@ -1,11 +1,11 @@
-Fitter Status : Successful - Tue Apr 29 18:07:06 2014
-Quartus II 64-Bit Version : 12.1 Build 177 11/07/2012 SJ Web Edition
+Fitter Status : Successful - Thu May 01 19:29:46 2014
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : sram
 Top-level Entity Name : sram
 Family : Cyclone II
 Device : EP2C35F672C6
 Timing Models : Final
-Total logic elements : 311 / 33,216 ( < 1 % )
+Total logic elements : 310 / 33,216 ( < 1 % )
     Total combinational functions : 287 / 33,216 ( < 1 % )
     Dedicated logic registers : 137 / 33,216 ( < 1 % )
 Total registers : 137

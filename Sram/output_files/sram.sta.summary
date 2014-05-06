@@ -3,32 +3,32 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'clk'
-Slack : -3.833
-TNS   : -227.905
+Slack : -3.611
+TNS   : -224.025
 
 Type  : Slow Model Setup 'VGA_top_level:c3|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -2.290
-TNS   : -38.573
+Slack : -2.130
+TNS   : -35.389
 
 Type  : Slow Model Setup 'state_reg.rd2'
-Slack : -1.177
-TNS   : -15.429
+Slack : -0.443
+TNS   : -2.794
 
 Type  : Slow Model Setup 'mem'
-Slack : 1.409
+Slack : 1.622
 TNS   : 0.000
 
 Type  : Slow Model Hold 'mem'
-Slack : -4.685
-TNS   : -99.097
+Slack : -4.809
+TNS   : -101.667
 
 Type  : Slow Model Hold 'state_reg.rd2'
-Slack : -2.599
-TNS   : -37.156
+Slack : -3.181
+TNS   : -47.484
 
 Type  : Slow Model Hold 'clk'
 Slack : -2.558
-TNS   : -26.911
+TNS   : -9.342
 
 Type  : Slow Model Hold 'VGA_top_level:c3|VGA_SYNC:videoSync|pixel_clock_int'
 Slack : 0.391
@@ -51,32 +51,32 @@ Slack : 0.500
 TNS   : 0.000
 
 Type  : Fast Model Setup 'clk'
-Slack : -1.218
-TNS   : -64.239
+Slack : -1.197
+TNS   : -63.291
 
 Type  : Fast Model Setup 'VGA_top_level:c3|VGA_SYNC:videoSync|pixel_clock_int'
-Slack : -0.575
-TNS   : -5.567
+Slack : -0.497
+TNS   : -4.910
 
 Type  : Fast Model Setup 'state_reg.rd2'
-Slack : -0.419
-TNS   : -4.695
+Slack : -0.034
+TNS   : -0.067
 
 Type  : Fast Model Setup 'mem'
-Slack : 1.023
+Slack : 1.091
 TNS   : 0.000
 
 Type  : Fast Model Hold 'mem'
-Slack : -2.640
-TNS   : -50.527
-
-Type  : Fast Model Hold 'clk'
-Slack : -1.599
-TNS   : -19.337
+Slack : -2.675
+TNS   : -51.455
 
 Type  : Fast Model Hold 'state_reg.rd2'
-Slack : -1.468
-TNS   : -22.180
+Slack : -1.768
+TNS   : -27.536
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.598
+TNS   : -11.222
 
 Type  : Fast Model Hold 'VGA_top_level:c3|VGA_SYNC:videoSync|pixel_clock_int'
 Slack : 0.215

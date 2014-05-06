@@ -300,14 +300,14 @@ rw => data_f2s_sig[3].ENA
 rw => data_f2s_sig[2].ENA
 rw => data_f2s_sig[1].ENA
 rw => data_f2s_sig[0].ENA
-addr[0] => lcdcdc:led3.data_in[0]
-addr[1] => lcdcdc:led3.data_in[1]
-addr[2] => lcdcdc:led3.data_in[2]
-addr[3] => lcdcdc:led3.data_in[3]
-data_f2s[0] => lcdcdc:led2.data_in[0]
-data_f2s[1] => lcdcdc:led2.data_in[1]
-data_f2s[2] => lcdcdc:led2.data_in[2]
-data_f2s[3] => lcdcdc:led2.data_in[3]
+addr[0] => leddcd:led3.data_in[0]
+addr[1] => leddcd:led3.data_in[1]
+addr[2] => leddcd:led3.data_in[2]
+addr[3] => leddcd:led3.data_in[3]
+data_f2s[0] => leddcd:led2.data_in[0]
+data_f2s[1] => leddcd:led2.data_in[1]
+data_f2s[2] => leddcd:led2.data_in[2]
+data_f2s[3] => leddcd:led2.data_in[3]
 data_f2s[4] => ~NO_FANOUT~
 data_f2s[5] => ~NO_FANOUT~
 data_f2s[6] => ~NO_FANOUT~
@@ -390,55 +390,55 @@ dio_a[12] <> dio_a[12]
 dio_a[13] <> dio_a[13]
 dio_a[14] <> dio_a[14]
 dio_a[15] <> dio_a[15]
-segments_out8[0] <= lcdcdc:led.segments_out[0]
-segments_out8[1] <= lcdcdc:led.segments_out[1]
-segments_out8[2] <= lcdcdc:led.segments_out[2]
-segments_out8[3] <= lcdcdc:led.segments_out[3]
-segments_out8[4] <= lcdcdc:led.segments_out[4]
-segments_out8[5] <= lcdcdc:led.segments_out[5]
-segments_out8[6] <= lcdcdc:led.segments_out[6]
-segments_out9[0] <= lcdcdc:led2.segments_out[0]
-segments_out9[1] <= lcdcdc:led2.segments_out[1]
-segments_out9[2] <= lcdcdc:led2.segments_out[2]
-segments_out9[3] <= lcdcdc:led2.segments_out[3]
-segments_out9[4] <= lcdcdc:led2.segments_out[4]
-segments_out9[5] <= lcdcdc:led2.segments_out[5]
-segments_out9[6] <= lcdcdc:led2.segments_out[6]
-segments_out10[0] <= lcdcdc:led3.segments_out[0]
-segments_out10[1] <= lcdcdc:led3.segments_out[1]
-segments_out10[2] <= lcdcdc:led3.segments_out[2]
-segments_out10[3] <= lcdcdc:led3.segments_out[3]
-segments_out10[4] <= lcdcdc:led3.segments_out[4]
-segments_out10[5] <= lcdcdc:led3.segments_out[5]
-segments_out10[6] <= lcdcdc:led3.segments_out[6]
-segment_out[0][0] <= lcdcdc:GEN_DEC:0:c2.segments_out[0]
-segment_out[0][1] <= lcdcdc:GEN_DEC:0:c2.segments_out[1]
-segment_out[0][2] <= lcdcdc:GEN_DEC:0:c2.segments_out[2]
-segment_out[0][3] <= lcdcdc:GEN_DEC:0:c2.segments_out[3]
-segment_out[0][4] <= lcdcdc:GEN_DEC:0:c2.segments_out[4]
-segment_out[0][5] <= lcdcdc:GEN_DEC:0:c2.segments_out[5]
-segment_out[0][6] <= lcdcdc:GEN_DEC:0:c2.segments_out[6]
-segment_out[1][0] <= lcdcdc:GEN_DEC:1:c2.segments_out[0]
-segment_out[1][1] <= lcdcdc:GEN_DEC:1:c2.segments_out[1]
-segment_out[1][2] <= lcdcdc:GEN_DEC:1:c2.segments_out[2]
-segment_out[1][3] <= lcdcdc:GEN_DEC:1:c2.segments_out[3]
-segment_out[1][4] <= lcdcdc:GEN_DEC:1:c2.segments_out[4]
-segment_out[1][5] <= lcdcdc:GEN_DEC:1:c2.segments_out[5]
-segment_out[1][6] <= lcdcdc:GEN_DEC:1:c2.segments_out[6]
-segment_out[2][0] <= lcdcdc:GEN_DEC:2:c2.segments_out[0]
-segment_out[2][1] <= lcdcdc:GEN_DEC:2:c2.segments_out[1]
-segment_out[2][2] <= lcdcdc:GEN_DEC:2:c2.segments_out[2]
-segment_out[2][3] <= lcdcdc:GEN_DEC:2:c2.segments_out[3]
-segment_out[2][4] <= lcdcdc:GEN_DEC:2:c2.segments_out[4]
-segment_out[2][5] <= lcdcdc:GEN_DEC:2:c2.segments_out[5]
-segment_out[2][6] <= lcdcdc:GEN_DEC:2:c2.segments_out[6]
-segment_out[3][0] <= lcdcdc:GEN_DEC:3:c2.segments_out[0]
-segment_out[3][1] <= lcdcdc:GEN_DEC:3:c2.segments_out[1]
-segment_out[3][2] <= lcdcdc:GEN_DEC:3:c2.segments_out[2]
-segment_out[3][3] <= lcdcdc:GEN_DEC:3:c2.segments_out[3]
-segment_out[3][4] <= lcdcdc:GEN_DEC:3:c2.segments_out[4]
-segment_out[3][5] <= lcdcdc:GEN_DEC:3:c2.segments_out[5]
-segment_out[3][6] <= lcdcdc:GEN_DEC:3:c2.segments_out[6]
+segments_out8[0] <= leddcd:led.segments_out[0]
+segments_out8[1] <= leddcd:led.segments_out[1]
+segments_out8[2] <= leddcd:led.segments_out[2]
+segments_out8[3] <= leddcd:led.segments_out[3]
+segments_out8[4] <= leddcd:led.segments_out[4]
+segments_out8[5] <= leddcd:led.segments_out[5]
+segments_out8[6] <= leddcd:led.segments_out[6]
+segments_out9[0] <= leddcd:led2.segments_out[0]
+segments_out9[1] <= leddcd:led2.segments_out[1]
+segments_out9[2] <= leddcd:led2.segments_out[2]
+segments_out9[3] <= leddcd:led2.segments_out[3]
+segments_out9[4] <= leddcd:led2.segments_out[4]
+segments_out9[5] <= leddcd:led2.segments_out[5]
+segments_out9[6] <= leddcd:led2.segments_out[6]
+segments_out10[0] <= leddcd:led3.segments_out[0]
+segments_out10[1] <= leddcd:led3.segments_out[1]
+segments_out10[2] <= leddcd:led3.segments_out[2]
+segments_out10[3] <= leddcd:led3.segments_out[3]
+segments_out10[4] <= leddcd:led3.segments_out[4]
+segments_out10[5] <= leddcd:led3.segments_out[5]
+segments_out10[6] <= leddcd:led3.segments_out[6]
+segment_out[0][0] <= leddcd:GEN_DEC:0:c2.segments_out[0]
+segment_out[0][1] <= leddcd:GEN_DEC:0:c2.segments_out[1]
+segment_out[0][2] <= leddcd:GEN_DEC:0:c2.segments_out[2]
+segment_out[0][3] <= leddcd:GEN_DEC:0:c2.segments_out[3]
+segment_out[0][4] <= leddcd:GEN_DEC:0:c2.segments_out[4]
+segment_out[0][5] <= leddcd:GEN_DEC:0:c2.segments_out[5]
+segment_out[0][6] <= leddcd:GEN_DEC:0:c2.segments_out[6]
+segment_out[1][0] <= leddcd:GEN_DEC:1:c2.segments_out[0]
+segment_out[1][1] <= leddcd:GEN_DEC:1:c2.segments_out[1]
+segment_out[1][2] <= leddcd:GEN_DEC:1:c2.segments_out[2]
+segment_out[1][3] <= leddcd:GEN_DEC:1:c2.segments_out[3]
+segment_out[1][4] <= leddcd:GEN_DEC:1:c2.segments_out[4]
+segment_out[1][5] <= leddcd:GEN_DEC:1:c2.segments_out[5]
+segment_out[1][6] <= leddcd:GEN_DEC:1:c2.segments_out[6]
+segment_out[2][0] <= leddcd:GEN_DEC:2:c2.segments_out[0]
+segment_out[2][1] <= leddcd:GEN_DEC:2:c2.segments_out[1]
+segment_out[2][2] <= leddcd:GEN_DEC:2:c2.segments_out[2]
+segment_out[2][3] <= leddcd:GEN_DEC:2:c2.segments_out[3]
+segment_out[2][4] <= leddcd:GEN_DEC:2:c2.segments_out[4]
+segment_out[2][5] <= leddcd:GEN_DEC:2:c2.segments_out[5]
+segment_out[2][6] <= leddcd:GEN_DEC:2:c2.segments_out[6]
+segment_out[3][0] <= leddcd:GEN_DEC:3:c2.segments_out[0]
+segment_out[3][1] <= leddcd:GEN_DEC:3:c2.segments_out[1]
+segment_out[3][2] <= leddcd:GEN_DEC:3:c2.segments_out[2]
+segment_out[3][3] <= leddcd:GEN_DEC:3:c2.segments_out[3]
+segment_out[3][4] <= leddcd:GEN_DEC:3:c2.segments_out[4]
+segment_out[3][5] <= leddcd:GEN_DEC:3:c2.segments_out[5]
+segment_out[3][6] <= leddcd:GEN_DEC:3:c2.segments_out[6]
 ce_a_n <= <GND>
 ub_a_n <= <GND>
 lb_a_n <= <GND>
@@ -484,7 +484,7 @@ VGA_BLANK <= VGA_top_level:c3.VGA_BLANK
 VGA_CLK <= VGA_top_level:c3.VGA_CLK
 
 
-|sram|lcdcdc:led
+|sram|leddcd:led
 data_in[0] => Equal0.IN0
 data_in[0] => Equal1.IN3
 data_in[0] => Equal2.IN1
@@ -554,7 +554,7 @@ segments_out[5] <= segments_out.DB_MAX_OUTPUT_PORT_TYPE
 segments_out[6] <= segments_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|sram|lcdcdc:led2
+|sram|leddcd:led2
 data_in[0] => Equal0.IN0
 data_in[0] => Equal1.IN3
 data_in[0] => Equal2.IN1
@@ -624,7 +624,7 @@ segments_out[5] <= segments_out.DB_MAX_OUTPUT_PORT_TYPE
 segments_out[6] <= segments_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|sram|lcdcdc:led3
+|sram|leddcd:led3
 data_in[0] => Equal0.IN0
 data_in[0] => Equal1.IN3
 data_in[0] => Equal2.IN1
@@ -694,7 +694,7 @@ segments_out[5] <= segments_out.DB_MAX_OUTPUT_PORT_TYPE
 segments_out[6] <= segments_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|sram|lcdcdc:\GEN_DEC:0:c2
+|sram|leddcd:\GEN_DEC:0:c2
 data_in[0] => Equal0.IN0
 data_in[0] => Equal1.IN3
 data_in[0] => Equal2.IN1
@@ -764,7 +764,7 @@ segments_out[5] <= segments_out.DB_MAX_OUTPUT_PORT_TYPE
 segments_out[6] <= segments_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|sram|lcdcdc:\GEN_DEC:1:c2
+|sram|leddcd:\GEN_DEC:1:c2
 data_in[0] => Equal0.IN0
 data_in[0] => Equal1.IN3
 data_in[0] => Equal2.IN1
@@ -834,7 +834,7 @@ segments_out[5] <= segments_out.DB_MAX_OUTPUT_PORT_TYPE
 segments_out[6] <= segments_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|sram|lcdcdc:\GEN_DEC:2:c2
+|sram|leddcd:\GEN_DEC:2:c2
 data_in[0] => Equal0.IN0
 data_in[0] => Equal1.IN3
 data_in[0] => Equal2.IN1
@@ -904,7 +904,7 @@ segments_out[5] <= segments_out.DB_MAX_OUTPUT_PORT_TYPE
 segments_out[6] <= segments_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|sram|lcdcdc:\GEN_DEC:3:c2
+|sram|leddcd:\GEN_DEC:3:c2
 data_in[0] => Equal0.IN0
 data_in[0] => Equal1.IN3
 data_in[0] => Equal2.IN1

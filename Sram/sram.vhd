@@ -60,6 +60,13 @@ port (CLOCK_50 										: in std_logic;
 			VGA_RED, VGA_GREEN, VGA_BLUE 					: out std_logic_vector(9 downto 0); 
 			HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK		: out std_logic);
 			end component;
+component leddcd is
+	port(
+		 data_in : in std_logic_vector(3 downto 0);
+		 segments_out : out std_logic_vector(6 downto 0)
+		);
+end component leddcd;	
+		
 		begin
  
     process( clk, reset)
@@ -122,6 +129,9 @@ port (CLOCK_50 										: in std_logic;
 				
 			end if;
 		end process;
+		
+-------------------------------------------------------------------------------------------------------			
+-------------------------------------------------------------------------------------------------------			
 		process(state_reg,mem,rw,dio_a,data_f2s_sig,addr_sig1, data_f2s_reg, data_s2f_reg, addr_reg)
 		--variable addr_int: integer :=0;
 		begin 
@@ -132,6 +142,7 @@ port (CLOCK_50 										: in std_logic;
 		   data_S2f_next<=data_s2f_reg;
 		   ready <= '0';
 	 	   case state_reg is
+----------------------------------------------------			
 			   when idle =>
 				  if (mem ='0') then    
 				     state_next <=idle;
@@ -149,14 +160,16 @@ port (CLOCK_50 										: in std_logic;
 						end if;
 					end if;
 					ready <= '1';
+----------------------------------------------------					
 				when wr1 => 
 				state_next <= wr2;
+----------------------------------------------------
 				when wr2=> 
 				--addr_int := to_integer(unsigned(addr_sig));
 				--addr_int:=addr_int + 1;
 			   --addr_sig<= std_logic_vector(to_unsigned(addr_int, 18));
 				state_next <=idle;
-				
+----------------------------------------------------				
 				
 				when rd1=>
 				state_next <= rd2;
@@ -167,6 +180,7 @@ port (CLOCK_50 										: in std_logic;
 				colorAddress<=dio_a(2 downto 0);
 			end case;
 		end process;
+----------------------------------------------------
 		process (state_next,rst)
 		
 		 
@@ -204,14 +218,13 @@ port (CLOCK_50 										: in std_logic;
 		 --addr_reg<="";
 		 --colorAddress<=dio_a(2 downto 0);
         
-		  led: lcdcdc port map (dio_a(3 downto 0), segments_out8);  --data from sram hex7
-		  led2: lcdcdc port map (data_f2s(3 downto 0), segments_out9); ---input data hex6
-		  led3: lcdcdc port map (addr(3 downto 0), segments_out10); -- address input
+		  led: leddcd port map (dio_a(3 downto 0), segments_out8);  --data from sram hex7
+		  led2: leddcd port map (data_f2s(3 downto 0), segments_out9); ---input data hex6
+		  led3: leddcd port map (addr(3 downto 0), segments_out10); -- address input
 		  GEN_DEC: for i in 0 to 3 generate 
-   c2: lcdcdc port map ((addr_sig(((4*i)+3) downto ((4*i)))) , segment_out(i));  ---address in sram
-  end generate;
- c3: Vga_top_level port map (clk, reset, colorAddress, VGA_RED, VGA_GREEN, VGA_BLUE, HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK);
- 
+		  c2: leddcd port map ((addr_sig(((4*i)+3) downto ((4*i)))) , segment_out(i));  ---address in sram
+		  end generate;
+		  c3: Vga_top_level port map (clk, reset, colorAddress, VGA_RED, VGA_GREEN, VGA_BLUE, HORIZ_SYNC, VERT_SYNC, VGA_BLANK, VGA_CLK);
 		  end arch;
 		  
 		
