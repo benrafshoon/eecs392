@@ -7,7 +7,7 @@ end
 
 file = fopen(strcat(pathname, input_filename), 'r');
 
-array = fscanf(file, '%x\n', [1 Inf]);
+array = fscanf(file, '00%02X\n', [1 Inf]);
 
 fclose(file);
 

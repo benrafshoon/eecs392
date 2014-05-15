@@ -19,7 +19,7 @@ image = imresize(rgb2gray(imread(strcat(pathname, input_filename))), [480, 640])
 file = fopen(strcat(pathname, output_filename), 'w+');
 for y = 1:size(image, 1)
     for x = 1:size(image, 2)
-        fprintf(file, '%x\n', image(y, x));
+        fprintf(file, '00%02X\n', image(y, x));
     end
 end
 
