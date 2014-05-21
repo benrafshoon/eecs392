@@ -30,7 +30,7 @@ begin
 	pixel_count <= current_pixel_count;
 	vertical_pixels : process(vsync, href) is
 	begin
-		if(vsync = '1') then
+		if(vsync = '1') then --- didint quite get that
 			current_row <= 0;
 		else
 			if(falling_edge(href)) then
@@ -39,7 +39,7 @@ begin
 		end if;
 		
 		if(rising_edge(vsync)) then
-			vertical_size <= current_row;
+			vertical_size <= current_row; ---counting what ?
 		end if;
 	end process vertical_pixels;
 	
@@ -79,7 +79,7 @@ begin
 			current_pixel_count <= 0;
 		else
 			if(rising_edge(clock)) then
-				if(second_byte = '1') then
+				if(second_byte = '1') then --second_byte is for what ?
 					current_pixel_count <= current_pixel_count + 1;
 				end if;
 			end if;

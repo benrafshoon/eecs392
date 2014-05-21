@@ -2,11 +2,13 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use IEEE.numeric_std.all;
 use WORK.decoder.all;
+--use IEEE.std_logic_arith.all;
+use IEEE.std_logic_unsigned.all;
 
 entity camerainterface is 
 port (
 	CLOCK_50 : in std_logic;
-	GPIO : inout std_logic_vector(35 downto 0);
+	GPIO : inout std_logic_vector(35 downto 0); -- 36 bits ?
 --	cam_pixeldata : in std_logic_vector (7 downto 0);
 --	cam_href : in std_logic;
 --	cam_vsync : in std_logic;
@@ -35,7 +37,8 @@ port (
 	SRAM_HB_N : out std_logic;
 	SRAM_OE_N : out std_logic;
 	SRAM_WE_N : out std_logic;
-	KEY : in std_logic_vector(3 downto 0)
+	KEY : in std_logic_vector(3 downto 0);
+	UART_RXD : in std_logic	---??
 	--test_out : out std_logic
 );
 end entity camerainterface;
@@ -90,7 +93,14 @@ component VGA_SYNC IS
 		);					    		
 END component VGA_SYNC;
 
-
+---Receive data from RS232----
+component RX IS
+port (CLK:IN STD_LOGIC;
+RX_LINE:IN STD_LOGIC;
+DATA:OUT STD_LOGIC_VECTOR(7 downto 0);
+BUSY:OUT STD_LOGIC
+);
+END component RX;
 
 
 	signal camera_clock : std_logic;
@@ -139,7 +149,12 @@ END component VGA_SYNC;
 	signal cam_pixeldata : std_logic_vector(7 downto 0);
 	
 	signal test_out : std_logic;
-
+	signal second_image_switch : std_logic;
+	--signal RX_LINE_sig : std_logic;
+	signal BUSY_sig: std_logic;
+	signal DATA_out: std_logic_vector(7 downto 0);
+	signal addr_offset: natural := 307199;
+	
 begin
 
 	hex0decoder : leddcd port map (hex0num, HEX0);
@@ -160,7 +175,7 @@ begin
 	hex1num <= num_y(7 downto 4);
 	hex0num <= num_y(3 downto 0);
 
-	
+	--DATA_out <= DATA;
 	cam_pixeldata <= GPIO(7 downto 0);
  	cam_href <= GPIO(8); --purple
 	cam_vsync <= GPIO(9); -- orange
@@ -168,7 +183,7 @@ begin
 	cam_pixelclock <= GPIO(11);
 	
 	GPIO(12) <= cam_pixelclock;
-	GPIO(35) <= test_out;
+	GPIO(35) <= test_out; --- whats this for ?
 	
 	
 	
@@ -189,7 +204,10 @@ begin
 		camera_y_data,
 		camera_y_clock
 	);
-	
+	RX_data_map : RX port map (CLOCK_50, 
+										UART_RXD,
+										DATA_out,
+										BUSY_sig);
 --	sram16to8address_instance : sram16to8address port map (
 --		sram8_address,
 --		sram8_low_bar_high,
@@ -217,7 +235,7 @@ begin
 	VGA_BLANK_N <= vga_video_on;
 	VGA_CLK <= vga_clock;
 	
-	test_out <= sram8_low_bar_high;
+	test_out <= sram8_low_bar_high; ----?
 	
 	camstatemachine_instance : camstatemachine port map (
 		CLOCK_50,
@@ -231,40 +249,40 @@ begin
 	process (read_sram, write_sram, vga_clock, vga_row, vga_column, camera_row, camera_current_pixel, camera_y_data) 
 	begin
 		if(read_sram = '1') then
-			--if(rising_edge(vga_clock)) then
-				--if(sram8_low_bar_high = '0') then
-					VGA_R <= sram_data_out(7 downto 0);
-					VGA_G <= sram_data_out(7 downto 0);
-					VGA_B <= sram_data_out(7 downto 0);
+			--if (second_image_switch = '1') then --or any other sort of flag
+		
+						VGA_R <= sram_data_out(7 downto 0);
+						VGA_G <= sram_data_out(7 downto 0);
+						VGA_B <= sram_data_out(7 downto 0);
+
+				SRAM_ADDR <= std_logic_vector(to_unsigned(vga_row * 640 + vga_column, 20));
 --				else
---					VGA_R <= sram_data_out(15 downto 8);
---					VGA_G <= sram_data_out(15 downto 8);
---					VGA_B <= sram_data_out(15 downto 8);
---				end if;
-			--end if;
-			
-			--sram8_address <= std_logic_vector(to_unsigned(vga_row * 640 + vga_column, 21));
-			SRAM_ADDR <= std_logic_vector(to_unsigned(vga_row * 640 + vga_column, 20));
-			
+--						VGA_R <= sram_data_out(7 downto 0);
+--						VGA_G <= sram_data_out(7 downto 0);
+--						VGA_B <= sram_data_out(7 downto 0);
+--				SRAM_ADDR <= std_logic_vector(to_unsigned(addr_offset + vga_row * 640 + vga_column, 20));
+				
+			--end if; 	
+				
 		elsif (write_sram = '1') then
-			
-			VGA_R <= x"00";
-			VGA_G <= x"FF";
-			VGA_B <= x"11";
-		
-		
-			sram_data_in(7 downto 0) <= camera_y_data;
-			sram_data_in(15 downto 8) <= x"00";
---			if(camera_row > 200) then
---				sram_data_in(7 downto 0) <= x"00";
---				sram_data_in(15 downto 8) <= x"00";
---			else
---				sram_data_in(7 downto 0) <= x"FF";
---				sram_data_in(15 downto 8) <= x"FF";
---			end if;
-			
-			SRAM_ADDR <= std_logic_vector(to_unsigned(camera_row * 640 + camera_column, 20));
-		
+					--if (second_image_switch = '1') then --or any other sort of flag
+						VGA_R <= x"00";
+						VGA_G <= x"FF";
+						VGA_B <= x"11";
+					
+					
+						sram_data_in(7 downto 0) <= DATA_out;
+						sram_data_in(15 downto 8) <= x"00";
+						SRAM_ADDR <= std_logic_vector(to_unsigned(camera_row * 640 + camera_column, 20));
+--					else 
+--						VGA_R <= x"00";
+--						VGA_G <= x"FF";
+--						VGA_B <= x"11";
+--					
+--						sram_data_in(7 downto 0) <= DATA_out;
+--						sram_data_in(15 downto 8) <= x"00";
+--						SRAM_ADDR <= std_logic_vector(to_unsigned(addr_offset + camera_row * 640 + camera_column, 20));
+			--end if;
 		else
 			VGA_R <= x"FF";
 			VGA_G <= x"FF";
@@ -272,6 +290,7 @@ begin
 			SRAM_ADDR <= (others => '0');
 		end if;
 	end process;
+	
 	
 	SRAM_WE_N <= NOT (camera_y_clock AND write_sram);
 	

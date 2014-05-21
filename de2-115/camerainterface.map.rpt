@@ -1,6 +1,6 @@
 Analysis & Synthesis report for camerainterface
-Mon May 05 12:14:43 2014
-Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Sun May 18 18:44:29 2014
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -19,9 +19,10 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  11. General Register Statistics
  12. Inverted Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Port Connectivity Checks: "cam:cam_instance"
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+ 14. Port Connectivity Checks: "RX:RX_data_map"
+ 15. Port Connectivity Checks: "cam:cam_instance"
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -44,24 +45,24 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                    ;
-+------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 05 12:14:43 2014      ;
-; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
-; Revision Name                      ; camerainterface                            ;
-; Top-level Entity Name              ; camerainterface                            ;
-; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 335                                        ;
-;     Total combinational functions  ; 274                                        ;
-;     Dedicated logic registers      ; 129                                        ;
-; Total registers                    ; 129                                        ;
-; Total pins                         ; 167                                        ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total PLLs                         ; 0                                          ;
-+------------------------------------+--------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun May 18 18:44:29 2014           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; camerainterface                                 ;
+; Top-level Entity Name              ; camerainterface                                 ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 388                                             ;
+;     Total combinational functions  ; 335                                             ;
+;     Dedicated logic registers      ; 157                                             ;
+; Total registers                    ; 157                                             ;
+; Total pins                         ; 168                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -69,7 +70,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP4CE115F29C8      ;                    ;
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
 ; Top-level entity name                                                      ; camerainterface    ; camerainterface    ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -151,35 +152,30 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                            ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                     ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
-; vga_sync.vhd                     ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/de2-115/vga_sync.vhd        ;         ;
-; leddcd.vhd                       ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/de2-115/leddcd.vhd          ;         ;
-; decoder.vhd                      ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/de2-115/decoder.vhd         ;         ;
-; camstatemachine.vhd              ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/de2-115/camstatemachine.vhd ;         ;
-; camerainterface.vhd              ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/de2-115/camerainterface.vhd ;         ;
-; cam.vhd                          ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/de2-115/cam.vhd             ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                  ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                           ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
+; vga_sync.vhd                     ; yes             ; User VHDL File  ; //psf/Home/Desktop/eecs392/de2-115/vga_sync.vhd        ;         ;
+; leddcd.vhd                       ; yes             ; User VHDL File  ; //psf/Home/Desktop/eecs392/de2-115/leddcd.vhd          ;         ;
+; decoder.vhd                      ; yes             ; User VHDL File  ; //psf/Home/Desktop/eecs392/de2-115/decoder.vhd         ;         ;
+; camstatemachine.vhd              ; yes             ; User VHDL File  ; //psf/Home/Desktop/eecs392/de2-115/camstatemachine.vhd ;         ;
+; camerainterface.vhd              ; yes             ; User VHDL File  ; //psf/Home/Desktop/eecs392/de2-115/camerainterface.vhd ;         ;
+; cam.vhd                          ; yes             ; User VHDL File  ; //psf/Home/Desktop/eecs392/de2-115/cam.vhd             ;         ;
+; RX.vhd                           ; yes             ; User VHDL File  ; //psf/Home/Desktop/eecs392/de2-115/RX.vhd              ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------+
@@ -187,28 +183,28 @@ applicable agreement for further details.
 +---------------------------------------------+--------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                ;
 +---------------------------------------------+--------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 335                                                                                  ;
+; Estimated Total logic elements              ; 388                                                                                  ;
 ;                                             ;                                                                                      ;
-; Total combinational functions               ; 274                                                                                  ;
+; Total combinational functions               ; 335                                                                                  ;
 ; Logic element usage by number of LUT inputs ;                                                                                      ;
-;     -- 4 input functions                    ; 129                                                                                  ;
-;     -- 3 input functions                    ; 70                                                                                   ;
-;     -- <=2 input functions                  ; 75                                                                                   ;
+;     -- 4 input functions                    ; 155                                                                                  ;
+;     -- 3 input functions                    ; 84                                                                                   ;
+;     -- <=2 input functions                  ; 96                                                                                   ;
 ;                                             ;                                                                                      ;
 ; Logic elements by mode                      ;                                                                                      ;
-;     -- normal mode                          ; 193                                                                                  ;
-;     -- arithmetic mode                      ; 81                                                                                   ;
+;     -- normal mode                          ; 242                                                                                  ;
+;     -- arithmetic mode                      ; 93                                                                                   ;
 ;                                             ;                                                                                      ;
-; Total registers                             ; 129                                                                                  ;
-;     -- Dedicated logic registers            ; 129                                                                                  ;
+; Total registers                             ; 157                                                                                  ;
+;     -- Dedicated logic registers            ; 157                                                                                  ;
 ;     -- I/O registers                        ; 0                                                                                    ;
 ;                                             ;                                                                                      ;
-; I/O pins                                    ; 167                                                                                  ;
+; I/O pins                                    ; 168                                                                                  ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                                                    ;
 ; Maximum fan-out node                        ; camstatemachine:camstatemachine_instance|current_state.wait_for_display_end_pre_copy ;
 ; Maximum fan-out                             ; 65                                                                                   ;
-; Total fan-out                               ; 1566                                                                                 ;
-; Average fan-out                             ; 1.98                                                                                 ;
+; Total fan-out                               ; 1837                                                                                 ;
+; Average fan-out                             ; 2.09                                                                                 ;
 +---------------------------------------------+--------------------------------------------------------------------------------------+
 
 
@@ -217,9 +213,10 @@ applicable agreement for further details.
 +-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Library Name ;
 +-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
-; |camerainterface                              ; 274 (113)         ; 129 (1)      ; 0           ; 0            ; 0       ; 0         ; 167  ; 0            ; |camerainterface                                          ; work         ;
+; |camerainterface                              ; 335 (114)         ; 157 (1)      ; 0           ; 0            ; 0       ; 0         ; 168  ; 0            ; |camerainterface                                          ; work         ;
+;    |RX:RX_data_map|                           ; 61 (61)           ; 36 (36)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|RX:RX_data_map                           ; work         ;
 ;    |VGA_SYNC:vga_sync_instance|               ; 59 (59)           ; 45 (45)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|VGA_SYNC:vga_sync_instance               ; work         ;
-;    |cam:cam_instance|                         ; 38 (38)           ; 77 (77)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|cam:cam_instance                         ; work         ;
+;    |cam:cam_instance|                         ; 37 (37)           ; 69 (69)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|cam:cam_instance                         ; work         ;
 ;    |camstatemachine:camstatemachine_instance| ; 8 (8)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|camstatemachine:camstatemachine_instance ; work         ;
 ;    |leddcd:hex0decoder|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|leddcd:hex0decoder                       ; work         ;
 ;    |leddcd:hex1decoder|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|leddcd:hex1decoder                       ; work         ;
@@ -253,14 +250,14 @@ Encoding Type:  One-Hot
 +----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
 +----------------------------------------------------+---------------------+------------------------+
-; sram_data_in[0]                                    ; sram_data_in[3]     ; yes                    ;
-; sram_data_in[1]                                    ; sram_data_in[3]     ; yes                    ;
-; sram_data_in[2]                                    ; sram_data_in[3]     ; yes                    ;
-; sram_data_in[3]                                    ; sram_data_in[3]     ; yes                    ;
-; sram_data_in[4]                                    ; sram_data_in[3]     ; yes                    ;
-; sram_data_in[5]                                    ; sram_data_in[3]     ; yes                    ;
-; sram_data_in[6]                                    ; sram_data_in[3]     ; yes                    ;
-; sram_data_in[7]                                    ; sram_data_in[3]     ; yes                    ;
+; sram_data_in[0]                                    ; sram_data_in[4]     ; yes                    ;
+; sram_data_in[1]                                    ; sram_data_in[4]     ; yes                    ;
+; sram_data_in[2]                                    ; sram_data_in[4]     ; yes                    ;
+; sram_data_in[3]                                    ; sram_data_in[4]     ; yes                    ;
+; sram_data_in[4]                                    ; sram_data_in[4]     ; yes                    ;
+; sram_data_in[5]                                    ; sram_data_in[4]     ; yes                    ;
+; sram_data_in[6]                                    ; sram_data_in[4]     ; yes                    ;
+; sram_data_in[7]                                    ; sram_data_in[4]     ; yes                    ;
 ; Number of user-specified and inferred latches = 8  ;                     ;                        ;
 +----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -284,12 +281,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 129   ;
-; Number of registers using Synchronous Clear  ; 1     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 157   ;
+; Number of registers using Synchronous Clear  ; 14    ;
+; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 43    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 48    ;
+; Number of registers using Clock Enable       ; 61    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -299,7 +296,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; cam:cam_instance|second_byte           ; 23      ;
+; cam:cam_instance|second_byte           ; 22      ;
 ; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
@@ -309,10 +306,21 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |camerainterface|VGA_SYNC:vga_sync_instance|v_count[7] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |camerainterface|VGA_SYNC:vga_sync_instance|v_count[1] ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |camerainterface|RX:RX_data_map|PRSCL[12]              ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |camerainterface|RX:RX_data_map|INDEX[0]               ;
 ; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; No         ; |camerainterface|SRAM_ADDR                             ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |camerainterface|SRAM_ADDR                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RX:RX_data_map"                                                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; busy ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------+
@@ -323,6 +331,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; horizontal_size[30..16] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; vertical_size[30..16]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; pixel_count             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; y_data                  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -331,7 +340,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -340,10 +349,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon May 05 12:14:41 2014
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun May 18 18:44:25 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off camerainterface -c camerainterface
-Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
     Info (12022): Found design unit 1: VGA_SYNC-behavioral
     Info (12023): Found entity 1: VGA_SYNC
@@ -368,34 +377,41 @@ Info (12021): Found 2 design units, including 1 entities, in source file camerai
 Info (12021): Found 2 design units, including 1 entities, in source file cam.vhd
     Info (12022): Found design unit 1: cam-cam
     Info (12023): Found entity 1: cam
+Info (12021): Found 2 design units, including 1 entities, in source file rx.vhd
+    Info (12022): Found design unit 1: RX-MAIN
+    Info (12023): Found entity 1: RX
 Info (12127): Elaborating entity "camerainterface" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at camerainterface.vhd(30): used implicit default value for signal "VGA_SYNC_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at camerainterface.vhd(113): object "camera_current_pixel" assigned a value but never read
-Warning (10541): VHDL Signal Declaration warning at camerainterface.vhd(120): used implicit default value for signal "sram8_low_bar_high" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(236): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(237): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(238): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(266): signal "camera_column" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at camerainterface.vhd(231): inferring latch(es) for signal or variable "sram_data_in", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "sram_data_in[0]" at camerainterface.vhd(231)
-Info (10041): Inferred latch for "sram_data_in[1]" at camerainterface.vhd(231)
-Info (10041): Inferred latch for "sram_data_in[2]" at camerainterface.vhd(231)
-Info (10041): Inferred latch for "sram_data_in[3]" at camerainterface.vhd(231)
-Info (10041): Inferred latch for "sram_data_in[4]" at camerainterface.vhd(231)
-Info (10041): Inferred latch for "sram_data_in[5]" at camerainterface.vhd(231)
-Info (10041): Inferred latch for "sram_data_in[6]" at camerainterface.vhd(231)
-Info (10041): Inferred latch for "sram_data_in[7]" at camerainterface.vhd(231)
-Info (10041): Inferred latch for "sram_data_in[8]" at camerainterface.vhd(231)
-Info (10041): Inferred latch for "sram_data_in[9]" at camerainterface.vhd(231)
-Info (10041): Inferred latch for "sram_data_in[10]" at camerainterface.vhd(231)
-Info (10041): Inferred latch for "sram_data_in[11]" at camerainterface.vhd(231)
-Info (10041): Inferred latch for "sram_data_in[12]" at camerainterface.vhd(231)
-Info (10041): Inferred latch for "sram_data_in[13]" at camerainterface.vhd(231)
-Info (10041): Inferred latch for "sram_data_in[14]" at camerainterface.vhd(231)
-Info (10041): Inferred latch for "sram_data_in[15]" at camerainterface.vhd(231)
-Warning (10665): Bidirectional port "GPIO[11]" at camerainterface.vhd(9) has a one-way connection to bidirectional port "GPIO[12]"
+Warning (10541): VHDL Signal Declaration warning at camerainterface.vhd(32): used implicit default value for signal "VGA_SYNC_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at camerainterface.vhd(123): object "camera_current_pixel" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at camerainterface.vhd(126): object "camera_y_data" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at camerainterface.vhd(130): used implicit default value for signal "sram8_low_bar_high" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at camerainterface.vhd(154): object "BUSY_sig" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(254): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(255): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(256): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(274): signal "DATA_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(276): signal "camera_column" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at camerainterface.vhd(249): inferring latch(es) for signal or variable "sram_data_in", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "sram_data_in[0]" at camerainterface.vhd(249)
+Info (10041): Inferred latch for "sram_data_in[1]" at camerainterface.vhd(249)
+Info (10041): Inferred latch for "sram_data_in[2]" at camerainterface.vhd(249)
+Info (10041): Inferred latch for "sram_data_in[3]" at camerainterface.vhd(249)
+Info (10041): Inferred latch for "sram_data_in[4]" at camerainterface.vhd(249)
+Info (10041): Inferred latch for "sram_data_in[5]" at camerainterface.vhd(249)
+Info (10041): Inferred latch for "sram_data_in[6]" at camerainterface.vhd(249)
+Info (10041): Inferred latch for "sram_data_in[7]" at camerainterface.vhd(249)
+Info (10041): Inferred latch for "sram_data_in[8]" at camerainterface.vhd(249)
+Info (10041): Inferred latch for "sram_data_in[9]" at camerainterface.vhd(249)
+Info (10041): Inferred latch for "sram_data_in[10]" at camerainterface.vhd(249)
+Info (10041): Inferred latch for "sram_data_in[11]" at camerainterface.vhd(249)
+Info (10041): Inferred latch for "sram_data_in[12]" at camerainterface.vhd(249)
+Info (10041): Inferred latch for "sram_data_in[13]" at camerainterface.vhd(249)
+Info (10041): Inferred latch for "sram_data_in[14]" at camerainterface.vhd(249)
+Info (10041): Inferred latch for "sram_data_in[15]" at camerainterface.vhd(249)
+Warning (10665): Bidirectional port "GPIO[11]" at camerainterface.vhd(11) has a one-way connection to bidirectional port "GPIO[12]"
 Info (12128): Elaborating entity "leddcd" for hierarchy "leddcd:hex0decoder"
 Info (12128): Elaborating entity "cam" for hierarchy "cam:cam_instance"
+Info (12128): Elaborating entity "RX" for hierarchy "RX:RX_data_map"
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:vga_sync_instance"
 Info (12128): Elaborating entity "camstatemachine" for hierarchy "camstatemachine:camstatemachine_instance"
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
@@ -464,15 +480,15 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-Info (21057): Implemented 503 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
+Info (21057): Implemented 557 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
     Info (21059): Implemented 110 output pins
     Info (21060): Implemented 52 bidirectional pins
-    Info (21061): Implemented 336 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 69 warnings
-    Info: Peak virtual memory: 564 megabytes
-    Info: Processing ended: Mon May 05 12:14:43 2014
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info (21061): Implemented 389 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 73 warnings
+    Info: Peak virtual memory: 492 megabytes
+    Info: Processing ended: Sun May 18 18:44:29 2014
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 

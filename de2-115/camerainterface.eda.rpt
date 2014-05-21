@@ -1,6 +1,6 @@
 EDA Netlist Writer report for camerainterface
-Mon Apr 28 20:05:47 2014
-Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Thu May 15 15:50:52 2014
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -34,7 +34,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                                       ;
 +---------------------------+------------------------------------------------------+
-; EDA Netlist Writer Status ; No Output Files Generated - Mon Apr 28 20:05:47 2014 ;
+; EDA Netlist Writer Status ; No Output Files Generated - Thu May 15 15:50:52 2014 ;
 ; Revision Name             ; camerainterface                                      ;
 ; Top-level Entity Name     ; camerainterface                                      ;
 ; Family                    ; Cyclone IV E                                         ;
@@ -46,13 +46,13 @@ applicable agreement for further details.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
-    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon Apr 28 20:05:46 2014
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu May 15 15:50:51 2014
 Info: Command: quartus_eda --read_settings_files=on --write_settings_files=off camerainterface -c camerainterface
 Warning (199027): Can't generate output files. Specify command-line options to generate output files, or update EDA tool settings using GUI or Tcl script.
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 437 megabytes
-    Info: Processing ended: Mon Apr 28 20:05:47 2014
+    Info: Peak virtual memory: 388 megabytes
+    Info: Processing ended: Thu May 15 15:50:52 2014
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

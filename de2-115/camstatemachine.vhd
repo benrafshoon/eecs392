@@ -14,7 +14,8 @@ port (
 end entity camstatemachine;
 
 architecture camstatemachine of camstatemachine is
-	type state_type is (display, wait_for_display_end_pre_copy, wait_for_cam_start, copy1, copy2, wait_for_display_end_post_copy);
+	type state_type is (display, wait_for_display_end_pre_copy, wait_for_cam_start, 
+							  copy1, copy2, wait_for_display_end_post_copy);
 	
 	signal current_state : state_type := wait_for_display_end_pre_copy;
 	signal next_state : state_type;
@@ -45,7 +46,7 @@ begin
 					next_state <= wait_for_display_end_pre_copy;
 				end if;
 				
-			when wait_for_cam_start => 
+			when wait_for_cam_start => 			--not write anything
 				display_sram <= '0';
 				write_sram <= '0';
 				
