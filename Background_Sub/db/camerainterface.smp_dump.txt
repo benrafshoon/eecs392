@@ -1,0 +1,12 @@
+
+State Machine - |camerainterface|camstatemachine:camstatemachine_instance|current_state
+Name current_state.wait_for_display_end_post_copy current_state.write_processed_pixel current_state.read_foreground_pixel current_state.read_background_pixel current_state.copy2 current_state.copy1 current_state.wait_for_cam_start current_state.display current_state.wait_for_display_end_pre_copy 
+current_state.wait_for_display_end_pre_copy 0 0 0 0 0 0 0 0 0 
+current_state.display 0 0 0 0 0 0 0 1 1 
+current_state.wait_for_cam_start 0 0 0 0 0 0 1 0 1 
+current_state.copy1 0 0 0 0 0 1 0 0 1 
+current_state.copy2 0 0 0 0 1 0 0 0 1 
+current_state.read_background_pixel 0 0 0 1 0 0 0 0 1 
+current_state.read_foreground_pixel 0 0 1 0 0 0 0 0 1 
+current_state.write_processed_pixel 0 1 0 0 0 0 0 0 1 
+current_state.wait_for_display_end_post_copy 1 0 0 0 0 0 0 0 1 

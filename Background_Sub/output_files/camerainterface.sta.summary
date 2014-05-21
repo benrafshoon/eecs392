@@ -1,0 +1,269 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'camera_clock~_Duplicate_2'
+Slack : -3.314
+TNS   : -98.293
+
+Type  : Slow 1200mV 85C Model Setup 'GPIO[11]'
+Slack : -2.758
+TNS   : -55.058
+
+Type  : Slow 1200mV 85C Model Setup 'GPIO[8]'
+Slack : -2.038
+TNS   : -36.098
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -1.296
+TNS   : -5.468
+
+Type  : Slow 1200mV 85C Model Setup 'camstatemachine:camstatemachine_instance|current_state.copy1'
+Slack : -1.216
+TNS   : -7.974
+
+Type  : Slow 1200mV 85C Model Setup 'GPIO[9]'
+Slack : -0.530
+TNS   : -4.683
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : -0.446
+TNS   : -0.759
+
+Type  : Slow 1200mV 85C Model Hold 'camstatemachine:camstatemachine_instance|current_state.copy1'
+Slack : 0.063
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'GPIO[9]'
+Slack : 0.379
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'camera_clock~_Duplicate_2'
+Slack : 0.447
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'GPIO[11]'
+Slack : 0.485
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'GPIO[8]'
+Slack : 0.497
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'GPIO[11]'
+Slack : -0.222
+TNS   : -2.128
+
+Type  : Slow 1200mV 85C Model Recovery 'GPIO[8]'
+Slack : -0.101
+TNS   : -0.101
+
+Type  : Slow 1200mV 85C Model Removal 'GPIO[8]'
+Slack : -0.173
+TNS   : -2.595
+
+Type  : Slow 1200mV 85C Model Removal 'GPIO[11]'
+Slack : 0.048
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GPIO[8]'
+Slack : -3.481
+TNS   : -51.065
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GPIO[11]'
+Slack : -3.481
+TNS   : -46.604
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GPIO[9]'
+Slack : -3.481
+TNS   : -27.273
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -16.383
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'camera_clock~_Duplicate_2'
+Slack : -1.487
+TNS   : -66.915
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'camstatemachine:camstatemachine_instance|current_state.copy1'
+Slack : 0.422
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'camera_clock~_Duplicate_2'
+Slack : -3.002
+TNS   : -88.709
+
+Type  : Slow 1200mV 0C Model Setup 'GPIO[11]'
+Slack : -2.415
+TNS   : -48.786
+
+Type  : Slow 1200mV 0C Model Setup 'GPIO[8]'
+Slack : -1.752
+TNS   : -32.549
+
+Type  : Slow 1200mV 0C Model Setup 'camstatemachine:camstatemachine_instance|current_state.copy1'
+Slack : -1.373
+TNS   : -9.346
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -1.090
+TNS   : -4.377
+
+Type  : Slow 1200mV 0C Model Setup 'GPIO[9]'
+Slack : -0.435
+TNS   : -3.272
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.311
+TNS   : -0.358
+
+Type  : Slow 1200mV 0C Model Hold 'camstatemachine:camstatemachine_instance|current_state.copy1'
+Slack : 0.293
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'GPIO[9]'
+Slack : 0.321
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'camera_clock~_Duplicate_2'
+Slack : 0.397
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'GPIO[11]'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'GPIO[8]'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'GPIO[11]'
+Slack : -0.039
+TNS   : -0.039
+
+Type  : Slow 1200mV 0C Model Recovery 'GPIO[8]'
+Slack : 0.037
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'GPIO[8]'
+Slack : -0.174
+TNS   : -2.610
+
+Type  : Slow 1200mV 0C Model Removal 'GPIO[11]'
+Slack : 0.008
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GPIO[8]'
+Slack : -3.481
+TNS   : -51.065
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GPIO[11]'
+Slack : -3.481
+TNS   : -46.604
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GPIO[9]'
+Slack : -3.481
+TNS   : -27.273
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -16.383
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'camera_clock~_Duplicate_2'
+Slack : -1.487
+TNS   : -66.915
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'camstatemachine:camstatemachine_instance|current_state.copy1'
+Slack : 0.282
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'camera_clock~_Duplicate_2'
+Slack : -0.863
+TNS   : -18.544
+
+Type  : Fast 1200mV 0C Model Setup 'GPIO[11]'
+Slack : -0.780
+TNS   : -12.185
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -0.439
+TNS   : -1.329
+
+Type  : Fast 1200mV 0C Model Setup 'GPIO[8]'
+Slack : -0.310
+TNS   : -1.565
+
+Type  : Fast 1200mV 0C Model Setup 'camstatemachine:camstatemachine_instance|current_state.copy1'
+Slack : 0.132
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'GPIO[9]'
+Slack : 0.332
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.395
+TNS   : -1.137
+
+Type  : Fast 1200mV 0C Model Hold 'camstatemachine:camstatemachine_instance|current_state.copy1'
+Slack : -0.059
+TNS   : -0.059
+
+Type  : Fast 1200mV 0C Model Hold 'GPIO[9]'
+Slack : 0.117
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'GPIO[8]'
+Slack : 0.135
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'camera_clock~_Duplicate_2'
+Slack : 0.180
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'GPIO[11]'
+Slack : 0.201
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'GPIO[11]'
+Slack : -0.466
+TNS   : -8.243
+
+Type  : Fast 1200mV 0C Model Recovery 'GPIO[8]'
+Slack : -0.391
+TNS   : -4.306
+
+Type  : Fast 1200mV 0C Model Removal 'GPIO[8]'
+Slack : -0.063
+TNS   : -0.945
+
+Type  : Fast 1200mV 0C Model Removal 'GPIO[11]'
+Slack : -0.010
+TNS   : -0.100
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GPIO[8]'
+Slack : -3.000
+TNS   : -47.161
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GPIO[11]'
+Slack : -3.000
+TNS   : -44.645
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GPIO[9]'
+Slack : -3.000
+TNS   : -25.069
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -14.107
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'camera_clock~_Duplicate_2'
+Slack : -1.000
+TNS   : -45.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'camstatemachine:camstatemachine_instance|current_state.copy1'
+Slack : 0.347
+TNS   : 0.000
+
+------------------------------------------------------------
