@@ -48,9 +48,13 @@ void setup() {
   Wire.begin();
   
   writeCameraRegister(0x0C, B00000100);
+  
+  //writeCameraRegister(0x12, B01000100);
   writeCameraRegister(0x12, B01000000);
+  
   writeCameraRegister(0x11, B10000000);
   writeCameraRegister(0x8C, B00100000);
+  
   writeCameraRegister(0x37, 0x91);
   writeCameraRegister(0x38, 0x12);
   writeCameraRegister(0x39, 0x43);
@@ -58,8 +62,15 @@ void setup() {
   writeCameraRegister(0x13, B10101111);
   
   writeCameraRegister(0x8C, B00100000);
+  
+  //writeCameraRegister(0x40, B11010000);
+  
+  writeCameraRegister(0x13, B10101111);
+  
+  //for RGB - COM7[2]=1 (0x12), COM7[0] = 0, COM15[4]=1 (0x40), COM15[5]=0
 }
 
 void loop() {
+  
   
 }

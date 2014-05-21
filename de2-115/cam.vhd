@@ -33,7 +33,7 @@ begin
 		if(vsync = '1') then --- didint quite get that
 			current_row <= 0;
 		else
-			if(falling_edge(href)) then
+			if(rising_edge(href)) then
 				current_row <= current_row + 1;
 			end if;
 		end if;
@@ -86,6 +86,6 @@ begin
 		end if;
 	end process total_pixels;
 	
-	y_data_clock <= href AND clock AND NOT second_byte;
+	y_data_clock <= href AND clock AND second_byte;
 	
 end architecture cam;

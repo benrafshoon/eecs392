@@ -3,6 +3,7 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'camera_clock~_Duplicate_2'
+<<<<<<< HEAD
 Slack : -2.692
 TNS   : -83.281
 
@@ -36,6 +37,45 @@ TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'camera_clock~_Duplicate_2'
 Slack : 0.404
+=======
+Slack : -3.360
+TNS   : -99.762
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -2.484
+TNS   : -9.598
+
+Type  : Slow 1200mV 85C Model Setup 'GPIO[11]'
+Slack : -2.248
+TNS   : -46.137
+
+Type  : Slow 1200mV 85C Model Setup 'GPIO[8]'
+Slack : -2.007
+TNS   : -38.696
+
+Type  : Slow 1200mV 85C Model Setup 'camstatemachine:camstatemachine_instance|current_state.copy1'
+Slack : -1.717
+TNS   : -11.089
+
+Type  : Slow 1200mV 85C Model Setup 'GPIO[9]'
+Slack : -0.699
+TNS   : -4.618
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : -0.426
+TNS   : -0.814
+
+Type  : Slow 1200mV 85C Model Hold 'camstatemachine:camstatemachine_instance|current_state.copy1'
+Slack : -0.053
+TNS   : -0.053
+
+Type  : Slow 1200mV 85C Model Hold 'GPIO[9]'
+Slack : 0.409
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'camera_clock~_Duplicate_2'
+Slack : 0.445
+>>>>>>> FETCH_HEAD
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'GPIO[11]'
@@ -46,6 +86,7 @@ Type  : Slow 1200mV 85C Model Hold 'GPIO[8]'
 Slack : 0.445
 TNS   : 0.000
 
+<<<<<<< HEAD
 Type  : Slow 1200mV 85C Model Hold 'GPIO[9]'
 Slack : 1.145
 TNS   : 0.000
@@ -64,6 +105,22 @@ TNS   : -4.554
 
 Type  : Slow 1200mV 85C Model Removal 'GPIO[8]'
 Slack : 0.158
+=======
+Type  : Slow 1200mV 85C Model Recovery 'GPIO[11]'
+Slack : -0.144
+TNS   : -1.176
+
+Type  : Slow 1200mV 85C Model Recovery 'GPIO[8]'
+Slack : 0.068
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'GPIO[8]'
+Slack : -0.085
+TNS   : -1.339
+
+Type  : Slow 1200mV 85C Model Removal 'GPIO[11]'
+Slack : 0.089
+>>>>>>> FETCH_HEAD
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GPIO[8]'
@@ -87,6 +144,7 @@ Slack : -1.285
 TNS   : -57.825
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'camstatemachine:camstatemachine_instance|current_state.copy1'
+<<<<<<< HEAD
 Slack : 0.416
 TNS   : 0.000
 
@@ -124,6 +182,49 @@ TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'camera_clock~_Duplicate_2'
 Slack : 0.354
+=======
+Slack : 0.366
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'camera_clock~_Duplicate_2'
+Slack : -3.106
+TNS   : -89.981
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -2.174
+TNS   : -8.099
+
+Type  : Slow 1200mV 0C Model Setup 'GPIO[11]'
+Slack : -2.001
+TNS   : -39.716
+
+Type  : Slow 1200mV 0C Model Setup 'camstatemachine:camstatemachine_instance|current_state.copy1'
+Slack : -1.813
+TNS   : -12.028
+
+Type  : Slow 1200mV 0C Model Setup 'GPIO[8]'
+Slack : -1.718
+TNS   : -35.111
+
+Type  : Slow 1200mV 0C Model Setup 'GPIO[9]'
+Slack : -0.607
+TNS   : -3.307
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.240
+TNS   : -0.264
+
+Type  : Slow 1200mV 0C Model Hold 'camstatemachine:camstatemachine_instance|current_state.copy1'
+Slack : 0.158
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'GPIO[9]'
+Slack : 0.370
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'camera_clock~_Duplicate_2'
+Slack : 0.396
+>>>>>>> FETCH_HEAD
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'GPIO[11]'
@@ -131,6 +232,7 @@ Slack : 0.387
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'GPIO[8]'
+<<<<<<< HEAD
 Slack : 0.398
 TNS   : 0.000
 
@@ -152,6 +254,25 @@ TNS   : -4.565
 
 Type  : Slow 1200mV 0C Model Removal 'GPIO[8]'
 Slack : 0.129
+=======
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'GPIO[11]'
+Slack : 0.033
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'GPIO[8]'
+Slack : 0.173
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'GPIO[8]'
+Slack : -0.084
+TNS   : -1.325
+
+Type  : Slow 1200mV 0C Model Removal 'GPIO[11]'
+Slack : 0.054
+>>>>>>> FETCH_HEAD
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GPIO[8]'
@@ -175,7 +296,11 @@ Slack : -1.285
 TNS   : -57.825
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'camstatemachine:camstatemachine_instance|current_state.copy1'
+<<<<<<< HEAD
 Slack : 0.430
+=======
+Slack : 0.251
+>>>>>>> FETCH_HEAD
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
@@ -183,6 +308,7 @@ Slack : -1.120
 TNS   : -18.792
 
 Type  : Fast 1200mV 0C Model Setup 'camera_clock~_Duplicate_2'
+<<<<<<< HEAD
 Slack : -0.956
 TNS   : -18.487
 
@@ -216,12 +342,56 @@ TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'GPIO[8]'
 Slack : 0.198
+=======
+Slack : -1.037
+TNS   : -18.447
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -1.033
+TNS   : -3.442
+
+Type  : Fast 1200mV 0C Model Setup 'GPIO[11]'
+Slack : -0.817
+TNS   : -9.070
+
+Type  : Fast 1200mV 0C Model Setup 'GPIO[8]'
+Slack : -0.297
+TNS   : -1.461
+
+Type  : Fast 1200mV 0C Model Setup 'camstatemachine:camstatemachine_instance|current_state.copy1'
+Slack : -0.137
+TNS   : -0.435
+
+Type  : Fast 1200mV 0C Model Setup 'GPIO[9]'
+Slack : 0.276
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.478
+TNS   : -1.377
+
+Type  : Fast 1200mV 0C Model Hold 'camstatemachine:camstatemachine_instance|current_state.copy1'
+Slack : -0.047
+TNS   : -0.047
+
+Type  : Fast 1200mV 0C Model Hold 'GPIO[9]'
+Slack : 0.135
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'GPIO[8]'
+Slack : 0.168
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'camera_clock~_Duplicate_2'
+Slack : 0.179
+>>>>>>> FETCH_HEAD
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'GPIO[11]'
 Slack : 0.201
 TNS   : 0.000
 
+<<<<<<< HEAD
 Type  : Fast 1200mV 0C Model Hold 'GPIO[9]'
 Slack : 1.300
 TNS   : 0.000
@@ -233,12 +403,22 @@ TNS   : -5.508
 Type  : Fast 1200mV 0C Model Recovery 'GPIO[8]'
 Slack : 0.556
 TNS   : 0.000
+=======
+Type  : Fast 1200mV 0C Model Recovery 'GPIO[11]'
+Slack : -0.393
+TNS   : -8.108
+
+Type  : Fast 1200mV 0C Model Recovery 'GPIO[8]'
+Slack : -0.298
+TNS   : -4.708
+>>>>>>> FETCH_HEAD
 
 Type  : Fast 1200mV 0C Model Removal 'GPIO[11]'
 Slack : -0.176
 TNS   : -3.172
 
 Type  : Fast 1200mV 0C Model Removal 'GPIO[8]'
+<<<<<<< HEAD
 Slack : -0.034
 TNS   : -0.510
 
@@ -257,13 +437,41 @@ TNS   : -32.939
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GPIO[9]'
 Slack : -3.000
 TNS   : -24.907
+=======
+Slack : -0.037
+TNS   : -0.578
+
+Type  : Fast 1200mV 0C Model Removal 'GPIO[11]'
+Slack : 0.000
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GPIO[8]'
+Slack : -3.000
+TNS   : -47.357
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GPIO[11]'
+Slack : -3.000
+TNS   : -44.821
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GPIO[9]'
+Slack : -3.000
+TNS   : -24.827
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -14.002
+>>>>>>> FETCH_HEAD
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'camera_clock~_Duplicate_2'
 Slack : -1.000
 TNS   : -45.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'camstatemachine:camstatemachine_instance|current_state.copy1'
+<<<<<<< HEAD
 Slack : 0.370
+=======
+Slack : 0.389
+>>>>>>> FETCH_HEAD
 TNS   : 0.000
 
 ------------------------------------------------------------

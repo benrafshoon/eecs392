@@ -1,6 +1,11 @@
 Analysis & Synthesis report for camerainterface
+<<<<<<< HEAD
 Sun May 18 18:44:29 2014
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+=======
+Wed May 07 16:29:35 2014
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+>>>>>>> FETCH_HEAD
 
 
 ---------------------
@@ -45,6 +50,7 @@ applicable agreement for further details.
 
 
 
+<<<<<<< HEAD
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
@@ -63,6 +69,26 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
 ; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
+=======
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed May 07 16:29:35 2014      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; camerainterface                            ;
+; Top-level Entity Name              ; camerainterface                            ;
+; Family                             ; Cyclone IV E                               ;
+; Total logic elements               ; 321                                        ;
+;     Total combinational functions  ; 260                                        ;
+;     Dedicated logic registers      ; 129                                        ;
+; Total registers                    ; 129                                        ;
+; Total pins                         ; 167                                        ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+>>>>>>> FETCH_HEAD
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -178,6 +204,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
 
 
+<<<<<<< HEAD
 +------------------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Resource Usage Summary                                                                                        ;
 +---------------------------------------------+--------------------------------------------------------------------------------------+
@@ -206,6 +233,36 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Total fan-out                               ; 1837                                                                                 ;
 ; Average fan-out                             ; 2.09                                                                                 ;
 +---------------------------------------------+--------------------------------------------------------------------------------------+
+=======
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimated Total logic elements              ; 321           ;
+;                                             ;               ;
+; Total combinational functions               ; 260           ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 121           ;
+;     -- 3 input functions                    ; 64            ;
+;     -- <=2 input functions                  ; 75            ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 179           ;
+;     -- arithmetic mode                      ; 81            ;
+;                                             ;               ;
+; Total registers                             ; 129           ;
+;     -- Dedicated logic registers            ; 129           ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 167           ;
+; Embedded Multiplier 9-bit elements          ; 0             ;
+; Maximum fan-out node                        ; GPIO[8]~input ;
+; Maximum fan-out                             ; 55            ;
+; Total fan-out                               ; 1516          ;
+; Average fan-out                             ; 1.96          ;
++---------------------------------------------+---------------+
+>>>>>>> FETCH_HEAD
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -213,8 +270,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Library Name ;
 +-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
+<<<<<<< HEAD
 ; |camerainterface                              ; 335 (114)         ; 157 (1)      ; 0           ; 0            ; 0       ; 0         ; 168  ; 0            ; |camerainterface                                          ; work         ;
 ;    |RX:RX_data_map|                           ; 61 (61)           ; 36 (36)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|RX:RX_data_map                           ; work         ;
+=======
+; |camerainterface                              ; 260 (99)          ; 129 (1)      ; 0           ; 0            ; 0       ; 0         ; 167  ; 0            ; |camerainterface                                          ; work         ;
+>>>>>>> FETCH_HEAD
 ;    |VGA_SYNC:vga_sync_instance|               ; 59 (59)           ; 45 (45)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|VGA_SYNC:vga_sync_instance               ; work         ;
 ;    |cam:cam_instance|                         ; 37 (37)           ; 69 (69)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|cam:cam_instance                         ; work         ;
 ;    |camstatemachine:camstatemachine_instance| ; 8 (8)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|camstatemachine:camstatemachine_instance ; work         ;
@@ -250,6 +311,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
 +----------------------------------------------------+---------------------+------------------------+
+<<<<<<< HEAD
 ; sram_data_in[0]                                    ; sram_data_in[4]     ; yes                    ;
 ; sram_data_in[1]                                    ; sram_data_in[4]     ; yes                    ;
 ; sram_data_in[2]                                    ; sram_data_in[4]     ; yes                    ;
@@ -258,6 +320,16 @@ Encoding Type:  One-Hot
 ; sram_data_in[5]                                    ; sram_data_in[4]     ; yes                    ;
 ; sram_data_in[6]                                    ; sram_data_in[4]     ; yes                    ;
 ; sram_data_in[7]                                    ; sram_data_in[4]     ; yes                    ;
+=======
+; sram_data_in[8]                                    ; sram_data_in[3]     ; yes                    ;
+; sram_data_in[9]                                    ; sram_data_in[3]     ; yes                    ;
+; sram_data_in[10]                                   ; sram_data_in[3]     ; yes                    ;
+; sram_data_in[11]                                   ; sram_data_in[3]     ; yes                    ;
+; sram_data_in[12]                                   ; sram_data_in[3]     ; yes                    ;
+; sram_data_in[13]                                   ; sram_data_in[3]     ; yes                    ;
+; sram_data_in[14]                                   ; sram_data_in[3]     ; yes                    ;
+; sram_data_in[15]                                   ; sram_data_in[3]     ; yes                    ;
+>>>>>>> FETCH_HEAD
 ; Number of user-specified and inferred latches = 8  ;                     ;                        ;
 +----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -306,9 +378,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+<<<<<<< HEAD
 ; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |camerainterface|VGA_SYNC:vga_sync_instance|v_count[1] ;
 ; 4:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |camerainterface|RX:RX_data_map|PRSCL[12]              ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |camerainterface|RX:RX_data_map|INDEX[0]               ;
+=======
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |camerainterface|VGA_SYNC:vga_sync_instance|v_count[5] ;
+>>>>>>> FETCH_HEAD
 ; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; No         ; |camerainterface|SRAM_ADDR                             ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |camerainterface|SRAM_ADDR                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
@@ -349,8 +425,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
+<<<<<<< HEAD
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
     Info: Processing started: Sun May 18 18:44:25 2014
+=======
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Wed May 07 16:29:33 2014
+>>>>>>> FETCH_HEAD
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off camerainterface -c camerainterface
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
@@ -381,6 +462,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file rx.vhd
     Info (12022): Found design unit 1: RX-MAIN
     Info (12023): Found entity 1: RX
 Info (12127): Elaborating entity "camerainterface" for the top level hierarchy
+<<<<<<< HEAD
 Warning (10541): VHDL Signal Declaration warning at camerainterface.vhd(32): used implicit default value for signal "VGA_SYNC_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10036): Verilog HDL or VHDL warning at camerainterface.vhd(123): object "camera_current_pixel" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at camerainterface.vhd(126): object "camera_y_data" assigned a value but never read
@@ -409,6 +491,33 @@ Info (10041): Inferred latch for "sram_data_in[13]" at camerainterface.vhd(249)
 Info (10041): Inferred latch for "sram_data_in[14]" at camerainterface.vhd(249)
 Info (10041): Inferred latch for "sram_data_in[15]" at camerainterface.vhd(249)
 Warning (10665): Bidirectional port "GPIO[11]" at camerainterface.vhd(11) has a one-way connection to bidirectional port "GPIO[12]"
+=======
+Warning (10541): VHDL Signal Declaration warning at camerainterface.vhd(30): used implicit default value for signal "VGA_SYNC_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at camerainterface.vhd(113): object "camera_current_pixel" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at camerainterface.vhd(120): used implicit default value for signal "sram8_low_bar_high" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(234): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(235): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(236): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(267): signal "camera_column" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at camerainterface.vhd(229): inferring latch(es) for signal or variable "sram_data_in", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "sram_data_in[0]" at camerainterface.vhd(229)
+Info (10041): Inferred latch for "sram_data_in[1]" at camerainterface.vhd(229)
+Info (10041): Inferred latch for "sram_data_in[2]" at camerainterface.vhd(229)
+Info (10041): Inferred latch for "sram_data_in[3]" at camerainterface.vhd(229)
+Info (10041): Inferred latch for "sram_data_in[4]" at camerainterface.vhd(229)
+Info (10041): Inferred latch for "sram_data_in[5]" at camerainterface.vhd(229)
+Info (10041): Inferred latch for "sram_data_in[6]" at camerainterface.vhd(229)
+Info (10041): Inferred latch for "sram_data_in[7]" at camerainterface.vhd(229)
+Info (10041): Inferred latch for "sram_data_in[8]" at camerainterface.vhd(229)
+Info (10041): Inferred latch for "sram_data_in[9]" at camerainterface.vhd(229)
+Info (10041): Inferred latch for "sram_data_in[10]" at camerainterface.vhd(229)
+Info (10041): Inferred latch for "sram_data_in[11]" at camerainterface.vhd(229)
+Info (10041): Inferred latch for "sram_data_in[12]" at camerainterface.vhd(229)
+Info (10041): Inferred latch for "sram_data_in[13]" at camerainterface.vhd(229)
+Info (10041): Inferred latch for "sram_data_in[14]" at camerainterface.vhd(229)
+Info (10041): Inferred latch for "sram_data_in[15]" at camerainterface.vhd(229)
+Warning (10665): Bidirectional port "GPIO[11]" at camerainterface.vhd(9) has a one-way connection to bidirectional port "GPIO[12]"
+>>>>>>> FETCH_HEAD
 Info (12128): Elaborating entity "leddcd" for hierarchy "leddcd:hex0decoder"
 Info (12128): Elaborating entity "cam" for hierarchy "cam:cam_instance"
 Info (12128): Elaborating entity "RX" for hierarchy "RX:RX_data_map"
@@ -453,14 +562,14 @@ Warning (13039): The following bidir pins have no drivers
 Warning (13032): The following tri-state nodes are fed by constants
     Warning (13033): The pin "GPIO[35]" is fed by GND
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[0]" to the node "VGA_R" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[1]" to the node "VGA_R" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[2]" to the node "VGA_R" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[3]" to the node "VGA_R" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[4]" to the node "VGA_R" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[5]" to the node "VGA_R" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[6]" to the node "VGA_R" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[7]" to the node "VGA_R" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[8]" to the node "VGA_R" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[9]" to the node "VGA_R" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[10]" to the node "VGA_R" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[11]" to the node "VGA_R" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[12]" to the node "VGA_R" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[13]" to the node "VGA_R" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[14]" to the node "VGA_R" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "sram_data_out[15]" to the node "VGA_R" into an OR gate
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13009): TRI or OPNDRN buffers permanently enabled
@@ -470,7 +579,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_SYNC_N" is stuck at GND
     Warning (13410): Pin "SRAM_CE_N" is stuck at GND
     Warning (13410): Pin "SRAM_LB_N" is stuck at GND
-    Warning (13410): Pin "SRAM_HB_N" is stuck at GND
+    Warning (13410): Pin "SRAM_UB_N" is stuck at GND
     Warning (13410): Pin "SRAM_OE_N" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 26 registers lost all their fanouts during netlist optimizations.
@@ -480,6 +589,7 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
+<<<<<<< HEAD
 Info (21057): Implemented 557 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 110 output pins
@@ -490,5 +600,17 @@ Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 73 warnin
     Info: Processing ended: Sun May 18 18:44:29 2014
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
+=======
+Info (21057): Implemented 489 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 110 output pins
+    Info (21060): Implemented 52 bidirectional pins
+    Info (21061): Implemented 322 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 69 warnings
+    Info: Peak virtual memory: 564 megabytes
+    Info: Processing ended: Wed May 07 16:29:35 2014
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+>>>>>>> FETCH_HEAD
 
 
