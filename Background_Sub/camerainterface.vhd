@@ -35,7 +35,9 @@ port (
 	SRAM_UB_N : out std_logic;
 	SRAM_OE_N : out std_logic;
 	SRAM_WE_N : out std_logic;
-	KEY : in std_logic_vector(3 downto 0)
+	KEY : in std_logic_vector(3 downto 0);
+	SW : in std_logic_vector(17 downto 0);
+	LEDR : out std_logic_vector(17 downto 0)
 	--test_out : out std_logic
 );
 end entity camerainterface;
@@ -79,7 +81,8 @@ port (
 	write_sram : out std_logic;
 	read_sram : out std_logic;
 	process_image : out std_logic;
-	image_select : out std_logic 
+	image_select : out std_logic;
+	background_button : in std_logic
 
 );
 end component camstatemachine;
@@ -239,14 +242,16 @@ begin
 		write_sram,
 		read_sram,
 		process_image,
-		image_select
+		image_select,
+		KEY(1)
 	);
 
 	process (read_sram, write_sram, vga_clock, vga_row, vga_column, camera_row, camera_current_pixel, camera_y_data, process_image, image_select) 
 	begin
 		if (process_image = '1') then  --Perfom background subtraction
 				if (read_sram = '1') then  --Read background and foreground pixels
-					
+						
+						
 						--Read background pixel 
 						if (image_select = '0') then  
 							SRAM_ADDR <= std_logic_vector(to_unsigned( pixel_counter , 20));
@@ -259,12 +264,12 @@ begin
 						end if;
 						
 				elsif (write_sram = '1') then  --Perform the subtraction
-				
+						
 						--Subtract pixels
-						diff <= bpixel - fpixel; 
+						diff <= abs(bpixel - fpixel); 
 						
 						--Threshold 
-						if (diff < 128) then	
+						if (diff < 80) then	
 							sram_data_in(15 downto 8) <= x"00";
 						else
 							sram_data_in(15 downto 8) <= x"FF";
@@ -274,7 +279,7 @@ begin
 						pixel_counter <= pixel_counter + 1;  --go to the next pixel 
 						
 						--Check to see if gone through all the pixels
-						if (pixel_counter < 268800) then	
+						if (pixel_counter < 307200) then	
 							backgroundsubtraction_eof <= '0';
 						else
 							backgroundsubtraction_eof <= '1';  --flag that background subtraction is done
@@ -283,14 +288,24 @@ begin
 				end if;					
 		
 		else
-				if(read_sram = '1') then  --Read from SRAM to display on VGA
-					VGA_R <= sram_data_out(15 downto 8);
-					VGA_G <= sram_data_out(15 downto 8);
-					VGA_B <= sram_data_out(15 downto 8);
 
-					SRAM_ADDR <= std_logic_vector(to_unsigned(vga_row * 640 + vga_column, 20));
+			if(read_sram = '1') then		
+			
+				if (SW(0) = '0') then
+						VGA_R <= sram_data_out(15 downto 8);
+						VGA_G <= sram_data_out(15 downto 8);
+						VGA_B <= sram_data_out(15 downto 8);
+						SRAM_ADDR <= std_logic_vector(to_unsigned(vga_row * 640 + vga_column, 20));
+				else
+				      VGA_R <= sram_data_out(15 downto 8);
+						VGA_G <= sram_data_out(15 downto 8);
+						VGA_B <= sram_data_out(15 downto 8);
+						SRAM_ADDR <= std_logic_vector(to_unsigned(vga_row * 640 + vga_column + 307200, 20));
+				end if;	
 
-				elsif (write_sram = '1') then  --Write to SRAM from camera
+			elsif (write_sram = '1') then
+
+				if (SW(0) = '0') then
 					VGA_R <= x"00";
 					VGA_G <= x"00";
 					VGA_B <= x"00";
@@ -299,19 +314,28 @@ begin
 					sram_data_in(15 downto 8) <= camera_y_data ;
 				
 					SRAM_ADDR <= std_logic_vector(to_unsigned(camera_row * 640 + camera_column, 20));
-					
-					--Set up for background subtraction
-					backgroundsubtraction_eof <= '0';
-					pixel_counter <= 0;
-
 				else
 					VGA_R <= x"00";
 					VGA_G <= x"00";
 					VGA_B <= x"00";
+
+					sram_data_in(7 downto 0) <= x"00";
+					sram_data_in(15 downto 8) <= camera_y_data ;
+					SRAM_ADDR <= std_logic_vector(to_unsigned(camera_row * 640 + camera_column + 307200, 20));
 					
-					SRAM_ADDR <= (others => '0');
+					--Set up for background subtraction
+						backgroundsubtraction_eof <= '0';
+						pixel_counter <= 0;
+					
 				end if;
-			
+
+			else
+				VGA_R <= x"00";
+				VGA_G <= x"00";
+				VGA_B <= x"00";
+				SRAM_ADDR <= (others => '0');
+			end if;
+		
 		end if;
 		
 	end process;
@@ -327,7 +351,10 @@ begin
 
 	SRAM_LB_N <= '0';
 	SRAM_UB_N <= '0';
-
+	
+	LEDR(0) <= process_image;
+	LEDR(1) <= backgroundsubtraction_eof;
+	
 
 	num_x <= std_logic_vector(to_unsigned(camera_width, 16));
 	num_y <= std_logic_vector(to_unsigned(camera_height, 16));

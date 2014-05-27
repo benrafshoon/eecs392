@@ -11,7 +11,8 @@ port (
 	write_sram : out std_logic;  							--Write Enable signal to SRAM
 	read_sram : out std_logic; 							--Read Enable signal to SRAM
 	process_image : out std_logic;  						--Signals other components that images need to be processed
-	image_select : out std_logic 							--Read background image when 0, foreground image when 1
+	image_select : out std_logic; 							--Read background image when 0, foreground image when 1
+	background_button : in std_logic
 
 );
 end entity camstatemachine;
@@ -27,6 +28,8 @@ begin
 	begin
 		if(copy_new_frame_button = '0') then
 			current_state <= wait_for_display_end_pre_copy;
+		elsif (background_button = '0') then
+			current_state <= read_background_pixel;
 		else
 			if(rising_edge(clock)) then
 				current_state <= next_state;
