@@ -1,5 +1,5 @@
 Analysis & Synthesis report for camerainterface
-Tue May 27 19:01:20 2014
+Wed May 28 16:27:23 2014
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -46,15 +46,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 27 19:01:20 2014      ;
+; Analysis & Synthesis Status        ; Successful - Wed May 28 16:27:23 2014      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; camerainterface                            ;
 ; Top-level Entity Name              ; camerainterface                            ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 599                                        ;
-;     Total combinational functions  ; 537                                        ;
-;     Dedicated logic registers      ; 163                                        ;
-; Total registers                    ; 163                                        ;
+; Total logic elements               ; 625                                        ;
+;     Total combinational functions  ; 563                                        ;
+;     Dedicated logic registers      ; 132                                        ;
+; Total registers                    ; 132                                        ;
 ; Total pins                         ; 203                                        ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -150,59 +150,65 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 8      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                       ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------+---------+
-; vga_sync.vhd                     ; yes             ; User VHDL File  ; C:/altera/13.1/Projects/vga_sync.vhd        ;         ;
-; leddcd.vhd                       ; yes             ; User VHDL File  ; C:/altera/13.1/Projects/leddcd.vhd          ;         ;
-; decoder.vhd                      ; yes             ; User VHDL File  ; C:/altera/13.1/Projects/decoder.vhd         ;         ;
-; camstatemachine.vhd              ; yes             ; User VHDL File  ; C:/altera/13.1/Projects/camstatemachine.vhd ;         ;
-; camerainterface.vhd              ; yes             ; User VHDL File  ; C:/altera/13.1/Projects/camerainterface.vhd ;         ;
-; cam.vhd                          ; yes             ; User VHDL File  ; C:/altera/13.1/Projects/cam.vhd             ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                   ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                            ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
+; vga_sync.vhd                     ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/Background_Sub/vga_sync.vhd        ;         ;
+; leddcd.vhd                       ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/Background_Sub/leddcd.vhd          ;         ;
+; decoder.vhd                      ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/Background_Sub/decoder.vhd         ;         ;
+; camstatemachine.vhd              ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/Background_Sub/camstatemachine.vhd ;         ;
+; camerainterface.vhd              ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/Background_Sub/camerainterface.vhd ;         ;
+; cam.vhd                          ; yes             ; User VHDL File  ; C:/Users/Ben/eecs392/Background_Sub/cam.vhd             ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                 ;
-+---------------------------------------------+---------------+
-; Resource                                    ; Usage         ;
-+---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 599           ;
-;                                             ;               ;
-; Total combinational functions               ; 537           ;
-; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 164           ;
-;     -- 3 input functions                    ; 177           ;
-;     -- <=2 input functions                  ; 196           ;
-;                                             ;               ;
-; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 322           ;
-;     -- arithmetic mode                      ; 215           ;
-;                                             ;               ;
-; Total registers                             ; 163           ;
-;     -- Dedicated logic registers            ; 163           ;
-;     -- I/O registers                        ; 0             ;
-;                                             ;               ;
-; I/O pins                                    ; 203           ;
-; Embedded Multiplier 9-bit elements          ; 0             ;
-; Maximum fan-out node                        ; GPIO[8]~input ;
-; Maximum fan-out                             ; 55            ;
-; Total fan-out                               ; 2406          ;
-; Average fan-out                             ; 2.08          ;
-+---------------------------------------------+---------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                               ;
++---------------------------------------------+-----------------------------+
+; Resource                                    ; Usage                       ;
++---------------------------------------------+-----------------------------+
+; Estimated Total logic elements              ; 625                         ;
+;                                             ;                             ;
+; Total combinational functions               ; 563                         ;
+; Logic element usage by number of LUT inputs ;                             ;
+;     -- 4 input functions                    ; 186                         ;
+;     -- 3 input functions                    ; 181                         ;
+;     -- <=2 input functions                  ; 196                         ;
+;                                             ;                             ;
+; Logic elements by mode                      ;                             ;
+;     -- normal mode                          ; 348                         ;
+;     -- arithmetic mode                      ; 215                         ;
+;                                             ;                             ;
+; Total registers                             ; 132                         ;
+;     -- Dedicated logic registers            ; 132                         ;
+;     -- I/O registers                        ; 0                           ;
+;                                             ;                             ;
+; I/O pins                                    ; 203                         ;
+; Embedded Multiplier 9-bit elements          ; 0                           ;
+; Maximum fan-out node                        ; backgroundsubtraction_eof~0 ;
+; Maximum fan-out                             ; 59                          ;
+; Total fan-out                               ; 2383                        ;
+; Average fan-out                             ; 2.07                        ;
++---------------------------------------------+-----------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -210,10 +216,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Library Name ;
 +-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
-; |camerainterface                              ; 537 (362)         ; 163 (32)     ; 0           ; 0            ; 0       ; 0         ; 203  ; 0            ; |camerainterface                                          ; work         ;
+; |camerainterface                              ; 563 (387)         ; 132 (1)      ; 0           ; 0            ; 0       ; 0         ; 203  ; 0            ; |camerainterface                                          ; work         ;
 ;    |VGA_SYNC:vga_sync_instance|               ; 58 (58)           ; 45 (45)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|VGA_SYNC:vga_sync_instance               ; work         ;
 ;    |cam:cam_instance|                         ; 38 (38)           ; 77 (77)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|cam:cam_instance                         ; work         ;
-;    |camstatemachine:camstatemachine_instance| ; 23 (23)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|camstatemachine:camstatemachine_instance ; work         ;
+;    |camstatemachine:camstatemachine_instance| ; 24 (24)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|camstatemachine:camstatemachine_instance ; work         ;
 ;    |leddcd:hex0decoder|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|leddcd:hex0decoder                       ; work         ;
 ;    |leddcd:hex1decoder|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|leddcd:hex1decoder                       ; work         ;
 ;    |leddcd:hex2decoder|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|leddcd:hex2decoder                       ; work         ;
@@ -255,8 +261,39 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_B[5]$latch                                        ; camstatemachine:camstatemachine_instance|WideOr2 ; yes                    ;
 ; VGA_B[6]$latch                                        ; camstatemachine:camstatemachine_instance|WideOr2 ; yes                    ;
 ; VGA_B[7]$latch                                        ; camstatemachine:camstatemachine_instance|WideOr2 ; yes                    ;
+; pixel_counter[0]                                      ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[1]                                      ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[2]                                      ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[3]                                      ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[4]                                      ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[5]                                      ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[6]                                      ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[7]                                      ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[8]                                      ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[9]                                      ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[10]                                     ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[11]                                     ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[12]                                     ; backgroundsubtraction_eof                        ; yes                    ;
 ; camstatemachine:camstatemachine_instance|image_select ; camstatemachine:camstatemachine_instance|WideOr7 ; yes                    ;
+; pixel_counter[13]                                     ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[14]                                     ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[15]                                     ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[16]                                     ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[17]                                     ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[18]                                     ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[19]                                     ; backgroundsubtraction_eof                        ; yes                    ;
 ; backgroundsubtraction_eof                             ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[20]                                     ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[21]                                     ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[22]                                     ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[23]                                     ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[24]                                     ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[25]                                     ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[26]                                     ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[27]                                     ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[28]                                     ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[29]                                     ; backgroundsubtraction_eof                        ; yes                    ;
+; pixel_counter[30]                                     ; backgroundsubtraction_eof                        ; yes                    ;
 ; sram_data_in[8]                                       ; SRAM_ADDR[13]                                    ; yes                    ;
 ; sram_data_in[9]                                       ; SRAM_ADDR[13]                                    ; yes                    ;
 ; sram_data_in[10]                                      ; SRAM_ADDR[13]                                    ; yes                    ;
@@ -288,13 +325,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; diff[28]                                              ; backgroundsubtraction_eof                        ; yes                    ;
 ; diff[29]                                              ; backgroundsubtraction_eof                        ; yes                    ;
 ; diff[30]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[6]                                               ; backgroundsubtraction_eof                        ; yes                    ;
 ; diff[7]                                               ; backgroundsubtraction_eof                        ; yes                    ;
-; diff[1]                                               ; backgroundsubtraction_eof                        ; yes                    ;
-; diff[2]                                               ; backgroundsubtraction_eof                        ; yes                    ;
 ; diff[3]                                               ; backgroundsubtraction_eof                        ; yes                    ;
 ; diff[4]                                               ; backgroundsubtraction_eof                        ; yes                    ;
 ; diff[5]                                               ; backgroundsubtraction_eof                        ; yes                    ;
-; diff[6]                                               ; backgroundsubtraction_eof                        ; yes                    ;
 ; bpixel[7]                                             ; bpixel[0]                                        ; yes                    ;
 ; fpixel[7]                                             ; fpixel[0]                                        ; yes                    ;
 ; bpixel[6]                                             ; bpixel[0]                                        ; yes                    ;
@@ -302,18 +337,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; bpixel[5]                                             ; bpixel[0]                                        ; yes                    ;
 ; fpixel[5]                                             ; fpixel[0]                                        ; yes                    ;
 ; bpixel[4]                                             ; bpixel[0]                                        ; yes                    ;
-; fpixel[4]                                             ; fpixel[0]                                        ; yes                    ;
-; bpixel[3]                                             ; bpixel[0]                                        ; yes                    ;
-; fpixel[3]                                             ; fpixel[0]                                        ; yes                    ;
-; bpixel[2]                                             ; bpixel[0]                                        ; yes                    ;
-; fpixel[2]                                             ; fpixel[0]                                        ; yes                    ;
-; bpixel[1]                                             ; bpixel[0]                                        ; yes                    ;
-; fpixel[1]                                             ; fpixel[0]                                        ; yes                    ;
-; bpixel[0]                                             ; bpixel[0]                                        ; yes                    ;
-; fpixel[0]                                             ; fpixel[0]                                        ; yes                    ;
-; Number of user-specified and inferred latches = 80    ;                                                  ;                        ;
+; Number of user-specified and inferred latches = 109   ;                                                  ;                        ;
 +-------------------------------------------------------+--------------------------------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +--------------------------------------------------------------------------------------+
@@ -334,12 +360,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 163   ;
+; Total registers                              ; 132   ;
 ; Number of registers using Synchronous Clear  ; 1     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 77    ;
+; Number of registers using Asynchronous Clear ; 46    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 78    ;
+; Number of registers using Clock Enable       ; 48    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -360,7 +386,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |camerainterface|VGA_SYNC:vga_sync_instance|v_count[0] ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |camerainterface|SRAM_ADDR[7]                          ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |camerainterface|SRAM_ADDR[6]                          ;
 ; 9:1                ; 7 bits    ; 42 LEs        ; 35 LEs               ; 7 LEs                  ; No         ; |camerainterface|SRAM_ADDR[13]                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
@@ -381,7 +407,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -391,9 +417,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue May 27 19:01:17 2014
+    Info: Processing started: Wed May 28 16:27:20 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off camerainterface -c camerainterface
-Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
     Info (12022): Found design unit 1: VGA_SYNC-behavioral
     Info (12023): Found entity 1: VGA_SYNC
@@ -426,7 +452,7 @@ Warning (10492): VHDL Process Statement warning at camerainterface.vhd(258): sig
 Warning (10492): VHDL Process Statement warning at camerainterface.vhd(259): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at camerainterface.vhd(263): signal "pixel_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at camerainterface.vhd(264): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(269): signal "CLOCK_50" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(270): signal "pixel_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at camerainterface.vhd(274): signal "bpixel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at camerainterface.vhd(274): signal "fpixel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at camerainterface.vhd(277): signal "diff" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -450,12 +476,17 @@ Warning (10492): VHDL Process Statement warning at camerainterface.vhd(353): sig
 Warning (10631): VHDL Process Statement warning at camerainterface.vhd(251): inferring latch(es) for signal or variable "SRAM_ADDR", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at camerainterface.vhd(251): inferring latch(es) for signal or variable "bpixel", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at camerainterface.vhd(251): inferring latch(es) for signal or variable "fpixel", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at camerainterface.vhd(251): inferring latch(es) for signal or variable "pixel_counter", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at camerainterface.vhd(251): inferring latch(es) for signal or variable "diff", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at camerainterface.vhd(251): inferring latch(es) for signal or variable "sram_data_in", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at camerainterface.vhd(251): inferring latch(es) for signal or variable "backgroundsubtraction_eof", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at camerainterface.vhd(251): inferring latch(es) for signal or variable "VGA_R", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at camerainterface.vhd(251): inferring latch(es) for signal or variable "VGA_G", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at camerainterface.vhd(251): inferring latch(es) for signal or variable "VGA_B", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(363): signal "CLOCK_50" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(363): signal "write_sram" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(365): signal "camera_y_clock" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(365): signal "write_sram" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10873): Using initial value X (don't care) for net "LEDR[17..2]" at camerainterface.vhd(40)
 Info (10041): Inferred latch for "VGA_B[0]" at camerainterface.vhd(251)
 Info (10041): Inferred latch for "VGA_B[1]" at camerainterface.vhd(251)
@@ -529,6 +560,37 @@ Info (10041): Inferred latch for "diff[27]" at camerainterface.vhd(251)
 Info (10041): Inferred latch for "diff[28]" at camerainterface.vhd(251)
 Info (10041): Inferred latch for "diff[29]" at camerainterface.vhd(251)
 Info (10041): Inferred latch for "diff[30]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[0]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[1]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[2]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[3]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[4]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[5]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[6]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[7]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[8]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[9]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[10]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[11]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[12]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[13]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[14]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[15]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[16]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[17]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[18]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[19]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[20]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[21]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[22]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[23]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[24]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[25]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[26]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[27]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[28]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[29]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "pixel_counter[30]" at camerainterface.vhd(251)
 Info (10041): Inferred latch for "fpixel[0]" at camerainterface.vhd(251)
 Info (10041): Inferred latch for "fpixel[1]" at camerainterface.vhd(251)
 Info (10041): Inferred latch for "fpixel[2]" at camerainterface.vhd(251)
@@ -821,15 +883,15 @@ Warning (21074): Design contains 17 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[15]"
     Warning (15610): No output dependent on input pin "SW[16]"
     Warning (15610): No output dependent on input pin "SW[17]"
-Info (21057): Implemented 805 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 831 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 128 output pins
     Info (21060): Implemented 52 bidirectional pins
-    Info (21061): Implemented 602 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 220 warnings
-    Info: Peak virtual memory: 517 megabytes
-    Info: Processing ended: Tue May 27 19:01:20 2014
+    Info (21061): Implemented 628 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 224 warnings
+    Info: Peak virtual memory: 557 megabytes
+    Info: Processing ended: Wed May 28 16:27:23 2014
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
 
 

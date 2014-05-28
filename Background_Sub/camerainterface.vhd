@@ -266,15 +266,15 @@ begin
 						
 				elsif (write_sram = '1') then  --Perform the subtraction
 						
-						if (rising_edge(CLOCK_50)) then	
+						--if (rising_edge(CLOCK_50)) then	
 							pixel_counter <= pixel_counter + 1;  --go to the next pixel
-						end if;
+						--end if;
 						
 						--Subtract pixels
 						diff <= abs(bpixel - fpixel); 
 						
 						--Threshold 
-						if (diff < 130) then	
+						if (diff < 200) then	
 							sram_data_in(15 downto 8) <= x"00";
 						else
 							sram_data_in(15 downto 8) <= x"FF";
@@ -357,7 +357,14 @@ begin
 		
 	end process;
 
-	SRAM_WE_N <= NOT (camera_y_clock AND write_sram);
+	process (process_image)
+	begin
+		if (process_image = '1') then
+			SRAM_WE_N <=  (clock_50 AND write_sram);
+		else
+			SRAM_WE_N <= NOT (camera_y_clock AND write_sram);
+		end if;
+	end process;
 
 	SRAM_DQ <= sram_data_in when write_sram = '1' else (others => 'Z');
 
