@@ -12,7 +12,8 @@ port (
 	read_sram : out std_logic; 							--Read Enable signal to SRAM
 	process_image : out std_logic;  						--Signals other components that images need to be processed
 	image_select : out std_logic; 							--Read background image when 0, foreground image when 1
-	background_button : in std_logic
+	background_button : in std_logic;
+	result_image_switch : in std_logic
 
 );
 end entity camstatemachine;
@@ -105,7 +106,6 @@ begin
 				image_select <= '1';
 				
 				next_state <= write_processed_pixel;
-				
 			
 			--State 7: Write processed image to SRAM 
 			when write_processed_pixel =>

@@ -3,43 +3,43 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'KEY[0]'
-Slack : -11.153
-TNS   : -539.510
+Slack : -10.156
+TNS   : -335.776
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -7.941
-TNS   : -25.058
+Slack : -6.866
+TNS   : -129.230
 
 Type  : Slow 1200mV 85C Model Setup 'camera_clock~_Duplicate_2'
-Slack : -3.507
-TNS   : -104.290
+Slack : -3.280
+TNS   : -106.019
 
 Type  : Slow 1200mV 85C Model Setup 'GPIO[11]'
-Slack : -2.223
-TNS   : -47.314
+Slack : -2.843
+TNS   : -55.975
 
 Type  : Slow 1200mV 85C Model Setup 'GPIO[8]'
-Slack : -2.034
-TNS   : -38.563
+Slack : -2.027
+TNS   : -35.223
 
 Type  : Slow 1200mV 85C Model Setup 'GPIO[9]'
-Slack : -0.616
-TNS   : -5.980
+Slack : -0.773
+TNS   : -8.699
 
 Type  : Slow 1200mV 85C Model Hold 'KEY[0]'
-Slack : -3.635
-TNS   : -195.725
+Slack : -3.092
+TNS   : -84.988
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
-Slack : -0.390
-TNS   : -1.223
+Slack : -0.572
+TNS   : -1.892
 
 Type  : Slow 1200mV 85C Model Hold 'camera_clock~_Duplicate_2'
-Slack : 0.448
+Slack : 0.428
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'GPIO[11]'
-Slack : 0.480
+Slack : 0.485
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'GPIO[8]'
@@ -47,31 +47,31 @@ Slack : 0.497
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'GPIO[9]'
-Slack : 0.621
+Slack : 0.711
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'CLOCK_50'
-Slack : -2.187
-TNS   : -18.095
+Slack : -0.894
+TNS   : -6.551
 
 Type  : Slow 1200mV 85C Model Recovery 'GPIO[11]'
-Slack : -0.138
-TNS   : -2.263
+Slack : -0.160
+TNS   : -0.922
 
 Type  : Slow 1200mV 85C Model Recovery 'GPIO[8]'
-Slack : 0.125
+Slack : 0.217
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'GPIO[8]'
-Slack : -0.123
-TNS   : -1.968
+Slack : -0.228
+TNS   : -3.648
 
 Type  : Slow 1200mV 85C Model Removal 'GPIO[11]'
-Slack : 0.047
+Slack : 0.040
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'CLOCK_50'
-Slack : 1.534
+Slack : 0.491
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GPIO[8]'
@@ -88,50 +88,50 @@ TNS   : -27.273
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'KEY[0]'
 Slack : -3.000
-TNS   : -171.373
+TNS   : -82.769
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -20.844
+TNS   : -66.941
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'camera_clock~_Duplicate_2'
 Slack : -1.487
 TNS   : -66.915
 
 Type  : Slow 1200mV 0C Model Setup 'KEY[0]'
-Slack : -9.837
-TNS   : -491.370
+Slack : -8.729
+TNS   : -292.989
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -7.055
-TNS   : -21.568
+Slack : -6.058
+TNS   : -117.277
 
 Type  : Slow 1200mV 0C Model Setup 'camera_clock~_Duplicate_2'
-Slack : -3.212
-TNS   : -93.603
+Slack : -2.956
+TNS   : -94.959
 
 Type  : Slow 1200mV 0C Model Setup 'GPIO[11]'
-Slack : -2.063
-TNS   : -41.338
+Slack : -2.507
+TNS   : -49.969
 
 Type  : Slow 1200mV 0C Model Setup 'GPIO[8]'
-Slack : -1.749
-TNS   : -35.089
+Slack : -1.746
+TNS   : -31.692
 
 Type  : Slow 1200mV 0C Model Setup 'GPIO[9]'
-Slack : -0.524
-TNS   : -4.486
+Slack : -0.674
+TNS   : -7.085
 
 Type  : Slow 1200mV 0C Model Hold 'KEY[0]'
-Slack : -3.509
-TNS   : -188.665
+Slack : -2.847
+TNS   : -76.822
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
-Slack : -0.186
-TNS   : -0.433
+Slack : -0.338
+TNS   : -1.141
 
 Type  : Slow 1200mV 0C Model Hold 'camera_clock~_Duplicate_2'
-Slack : 0.398
+Slack : 0.380
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'GPIO[11]'
@@ -143,31 +143,31 @@ Slack : 0.445
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'GPIO[9]'
-Slack : 0.541
+Slack : 0.622
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'CLOCK_50'
-Slack : -1.854
-TNS   : -15.561
+Slack : -0.702
+TNS   : -5.343
 
 Type  : Slow 1200mV 0C Model Recovery 'GPIO[11]'
-Slack : 0.037
+Slack : 0.022
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'GPIO[8]'
-Slack : 0.237
+Slack : 0.324
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'GPIO[8]'
-Slack : -0.127
-TNS   : -2.032
+Slack : -0.230
+TNS   : -3.680
 
 Type  : Slow 1200mV 0C Model Removal 'GPIO[11]'
-Slack : 0.026
+Slack : 0.018
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'CLOCK_50'
-Slack : 1.555
+Slack : 0.616
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GPIO[8]'
@@ -184,107 +184,107 @@ TNS   : -27.273
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'KEY[0]'
 Slack : -3.000
-TNS   : -144.893
+TNS   : -104.470
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -20.849
+TNS   : -66.941
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'camera_clock~_Duplicate_2'
 Slack : -1.487
 TNS   : -66.915
 
 Type  : Fast 1200mV 0C Model Setup 'KEY[0]'
-Slack : -5.266
-TNS   : -260.899
+Slack : -4.894
+TNS   : -158.126
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -3.891
-TNS   : -11.833
+Slack : -3.441
+TNS   : -47.463
 
 Type  : Fast 1200mV 0C Model Setup 'camera_clock~_Duplicate_2'
-Slack : -0.951
-TNS   : -20.083
+Slack : -0.901
+TNS   : -20.807
 
 Type  : Fast 1200mV 0C Model Setup 'GPIO[11]'
-Slack : -0.759
-TNS   : -8.309
+Slack : -0.755
+TNS   : -12.376
 
 Type  : Fast 1200mV 0C Model Setup 'GPIO[8]'
-Slack : -0.310
-TNS   : -1.560
+Slack : -0.303
+TNS   : -1.507
 
 Type  : Fast 1200mV 0C Model Setup 'GPIO[9]'
-Slack : 0.307
+Slack : 0.261
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'KEY[0]'
-Slack : -1.892
-TNS   : -108.820
+Slack : -1.719
+TNS   : -48.101
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
-Slack : -0.487
-TNS   : -2.051
+Slack : -0.505
+TNS   : -2.181
 
 Type  : Fast 1200mV 0C Model Hold 'GPIO[8]'
-Slack : 0.106
+Slack : 0.139
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'GPIO[11]'
-Slack : 0.159
+Slack : 0.168
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'camera_clock~_Duplicate_2'
-Slack : 0.181
+Slack : 0.170
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'GPIO[9]'
-Slack : 0.207
+Slack : 0.240
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'CLOCK_50'
-Slack : -1.182
-TNS   : -9.638
+Slack : -0.529
+TNS   : -3.869
 
 Type  : Fast 1200mV 0C Model Recovery 'GPIO[11]'
-Slack : -0.440
-TNS   : -8.993
+Slack : -0.444
+TNS   : -7.421
 
 Type  : Fast 1200mV 0C Model Recovery 'GPIO[8]'
-Slack : -0.277
-TNS   : -4.432
+Slack : -0.249
+TNS   : -3.984
 
 Type  : Fast 1200mV 0C Model Removal 'GPIO[8]'
-Slack : -0.044
-TNS   : -0.704
+Slack : -0.077
+TNS   : -1.232
 
 Type  : Fast 1200mV 0C Model Removal 'GPIO[11]'
-Slack : -0.001
-TNS   : -0.001
+Slack : -0.022
+TNS   : -0.292
 
 Type  : Fast 1200mV 0C Model Removal 'CLOCK_50'
-Slack : 0.533
+Slack : 0.043
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'KEY[0]'
 Slack : -3.000
-TNS   : -188.149
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GPIO[8]'
-Slack : -3.000
-TNS   : -47.127
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GPIO[11]'
-Slack : -3.000
-TNS   : -45.397
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GPIO[9]'
-Slack : -3.000
-TNS   : -25.147
+TNS   : -93.097
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -15.830
+TNS   : -56.501
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GPIO[8]'
+Slack : -3.000
+TNS   : -47.413
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GPIO[11]'
+Slack : -3.000
+TNS   : -44.481
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GPIO[9]'
+Slack : -3.000
+TNS   : -24.875
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'camera_clock~_Duplicate_2'
 Slack : -1.000

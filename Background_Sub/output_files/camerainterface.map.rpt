@@ -1,5 +1,5 @@
 Analysis & Synthesis report for camerainterface
-Mon May 26 23:12:58 2014
+Tue May 27 19:01:20 2014
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -46,15 +46,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 26 23:12:58 2014      ;
+; Analysis & Synthesis Status        ; Successful - Tue May 27 19:01:20 2014      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; camerainterface                            ;
 ; Top-level Entity Name              ; camerainterface                            ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 640                                        ;
-;     Total combinational functions  ; 578                                        ;
-;     Dedicated logic registers      ; 132                                        ;
-; Total registers                    ; 132                                        ;
+; Total logic elements               ; 599                                        ;
+;     Total combinational functions  ; 537                                        ;
+;     Dedicated logic registers      ; 163                                        ;
+; Total registers                    ; 163                                        ;
 ; Total pins                         ; 203                                        ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -180,27 +180,27 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 640           ;
+; Estimated Total logic elements              ; 599           ;
 ;                                             ;               ;
-; Total combinational functions               ; 578           ;
+; Total combinational functions               ; 537           ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 182           ;
-;     -- 3 input functions                    ; 206           ;
-;     -- <=2 input functions                  ; 190           ;
+;     -- 4 input functions                    ; 164           ;
+;     -- 3 input functions                    ; 177           ;
+;     -- <=2 input functions                  ; 196           ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 368           ;
-;     -- arithmetic mode                      ; 210           ;
+;     -- normal mode                          ; 322           ;
+;     -- arithmetic mode                      ; 215           ;
 ;                                             ;               ;
-; Total registers                             ; 132           ;
-;     -- Dedicated logic registers            ; 132           ;
+; Total registers                             ; 163           ;
+;     -- Dedicated logic registers            ; 163           ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
 ; I/O pins                                    ; 203           ;
 ; Embedded Multiplier 9-bit elements          ; 0             ;
 ; Maximum fan-out node                        ; GPIO[8]~input ;
 ; Maximum fan-out                             ; 55            ;
-; Total fan-out                               ; 2432          ;
+; Total fan-out                               ; 2406          ;
 ; Average fan-out                             ; 2.08          ;
 +---------------------------------------------+---------------+
 
@@ -210,7 +210,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Library Name ;
 +-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
-; |camerainterface                              ; 578 (403)         ; 132 (1)      ; 0           ; 0            ; 0       ; 0         ; 203  ; 0            ; |camerainterface                                          ; work         ;
+; |camerainterface                              ; 537 (362)         ; 163 (32)     ; 0           ; 0            ; 0       ; 0         ; 203  ; 0            ; |camerainterface                                          ; work         ;
 ;    |VGA_SYNC:vga_sync_instance|               ; 58 (58)           ; 45 (45)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|VGA_SYNC:vga_sync_instance               ; work         ;
 ;    |cam:cam_instance|                         ; 38 (38)           ; 77 (77)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|cam:cam_instance                         ; work         ;
 ;    |camstatemachine:camstatemachine_instance| ; 23 (23)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camerainterface|camstatemachine:camstatemachine_instance ; work         ;
@@ -255,74 +255,46 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_B[5]$latch                                        ; camstatemachine:camstatemachine_instance|WideOr2 ; yes                    ;
 ; VGA_B[6]$latch                                        ; camstatemachine:camstatemachine_instance|WideOr2 ; yes                    ;
 ; VGA_B[7]$latch                                        ; camstatemachine:camstatemachine_instance|WideOr2 ; yes                    ;
-; pixel_counter[0]                                      ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[1]                                      ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[2]                                      ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[3]                                      ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[4]                                      ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[5]                                      ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[6]                                      ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[7]                                      ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[8]                                      ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[9]                                      ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[10]                                     ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[11]                                     ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[12]                                     ; backgroundsubtraction_eof                        ; yes                    ;
 ; camstatemachine:camstatemachine_instance|image_select ; camstatemachine:camstatemachine_instance|WideOr7 ; yes                    ;
-; pixel_counter[13]                                     ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[14]                                     ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[15]                                     ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[16]                                     ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[17]                                     ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[18]                                     ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[19]                                     ; backgroundsubtraction_eof                        ; yes                    ;
 ; backgroundsubtraction_eof                             ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[20]                                     ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[21]                                     ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[22]                                     ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[23]                                     ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[24]                                     ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[25]                                     ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[26]                                     ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[27]                                     ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[28]                                     ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[29]                                     ; backgroundsubtraction_eof                        ; yes                    ;
-; pixel_counter[30]                                     ; backgroundsubtraction_eof                        ; yes                    ;
-; sram_data_in[8]                                       ; LEDR[4]                                          ; yes                    ;
-; sram_data_in[9]                                       ; LEDR[4]                                          ; yes                    ;
-; sram_data_in[10]                                      ; LEDR[4]                                          ; yes                    ;
-; sram_data_in[11]                                      ; LEDR[4]                                          ; yes                    ;
-; sram_data_in[12]                                      ; LEDR[4]                                          ; yes                    ;
-; sram_data_in[13]                                      ; LEDR[4]                                          ; yes                    ;
-; sram_data_in[14]                                      ; LEDR[4]                                          ; yes                    ;
-; sram_data_in[15]                                      ; LEDR[4]                                          ; yes                    ;
-; diff[7]                                               ; LEDR[4]                                          ; yes                    ;
-; diff[8]                                               ; LEDR[4]                                          ; yes                    ;
-; diff[9]                                               ; LEDR[4]                                          ; yes                    ;
-; diff[10]                                              ; LEDR[4]                                          ; yes                    ;
-; diff[11]                                              ; LEDR[4]                                          ; yes                    ;
-; diff[12]                                              ; LEDR[4]                                          ; yes                    ;
-; diff[13]                                              ; LEDR[4]                                          ; yes                    ;
-; diff[14]                                              ; LEDR[4]                                          ; yes                    ;
-; diff[15]                                              ; LEDR[4]                                          ; yes                    ;
-; diff[16]                                              ; LEDR[4]                                          ; yes                    ;
-; diff[17]                                              ; LEDR[4]                                          ; yes                    ;
-; diff[18]                                              ; LEDR[4]                                          ; yes                    ;
-; diff[19]                                              ; LEDR[4]                                          ; yes                    ;
-; diff[20]                                              ; LEDR[4]                                          ; yes                    ;
-; diff[21]                                              ; LEDR[4]                                          ; yes                    ;
-; diff[22]                                              ; LEDR[4]                                          ; yes                    ;
-; diff[23]                                              ; LEDR[4]                                          ; yes                    ;
-; diff[24]                                              ; LEDR[4]                                          ; yes                    ;
-; diff[25]                                              ; LEDR[4]                                          ; yes                    ;
-; diff[26]                                              ; LEDR[4]                                          ; yes                    ;
-; diff[27]                                              ; LEDR[4]                                          ; yes                    ;
-; diff[28]                                              ; LEDR[4]                                          ; yes                    ;
-; diff[29]                                              ; LEDR[4]                                          ; yes                    ;
-; diff[30]                                              ; LEDR[4]                                          ; yes                    ;
-; diff[6]                                               ; LEDR[4]                                          ; yes                    ;
-; diff[4]                                               ; LEDR[4]                                          ; yes                    ;
-; diff[5]                                               ; LEDR[4]                                          ; yes                    ;
+; sram_data_in[8]                                       ; SRAM_ADDR[13]                                    ; yes                    ;
+; sram_data_in[9]                                       ; SRAM_ADDR[13]                                    ; yes                    ;
+; sram_data_in[10]                                      ; SRAM_ADDR[13]                                    ; yes                    ;
+; sram_data_in[11]                                      ; SRAM_ADDR[13]                                    ; yes                    ;
+; sram_data_in[12]                                      ; SRAM_ADDR[13]                                    ; yes                    ;
+; sram_data_in[13]                                      ; SRAM_ADDR[13]                                    ; yes                    ;
+; sram_data_in[14]                                      ; SRAM_ADDR[13]                                    ; yes                    ;
+; sram_data_in[15]                                      ; SRAM_ADDR[13]                                    ; yes                    ;
+; diff[8]                                               ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[9]                                               ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[10]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[11]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[12]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[13]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[14]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[15]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[16]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[17]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[18]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[19]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[20]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[21]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[22]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[23]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[24]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[25]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[26]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[27]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[28]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[29]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[30]                                              ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[7]                                               ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[1]                                               ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[2]                                               ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[3]                                               ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[4]                                               ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[5]                                               ; backgroundsubtraction_eof                        ; yes                    ;
+; diff[6]                                               ; backgroundsubtraction_eof                        ; yes                    ;
 ; bpixel[7]                                             ; bpixel[0]                                        ; yes                    ;
 ; fpixel[7]                                             ; fpixel[0]                                        ; yes                    ;
 ; bpixel[6]                                             ; bpixel[0]                                        ; yes                    ;
@@ -331,9 +303,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; fpixel[5]                                             ; fpixel[0]                                        ; yes                    ;
 ; bpixel[4]                                             ; bpixel[0]                                        ; yes                    ;
 ; fpixel[4]                                             ; fpixel[0]                                        ; yes                    ;
-; Number of user-specified and inferred latches = 108   ;                                                  ;                        ;
+; bpixel[3]                                             ; bpixel[0]                                        ; yes                    ;
+; fpixel[3]                                             ; fpixel[0]                                        ; yes                    ;
+; bpixel[2]                                             ; bpixel[0]                                        ; yes                    ;
+; fpixel[2]                                             ; fpixel[0]                                        ; yes                    ;
+; bpixel[1]                                             ; bpixel[0]                                        ; yes                    ;
+; fpixel[1]                                             ; fpixel[0]                                        ; yes                    ;
+; bpixel[0]                                             ; bpixel[0]                                        ; yes                    ;
+; fpixel[0]                                             ; fpixel[0]                                        ; yes                    ;
+; Number of user-specified and inferred latches = 80    ;                                                  ;                        ;
 +-------------------------------------------------------+--------------------------------------------------+------------------------+
-Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +--------------------------------------------------------------------------------------+
@@ -354,12 +334,12 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 132   ;
+; Total registers                              ; 163   ;
 ; Number of registers using Synchronous Clear  ; 1     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 46    ;
+; Number of registers using Asynchronous Clear ; 77    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 48    ;
+; Number of registers using Clock Enable       ; 78    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -379,9 +359,9 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |camerainterface|VGA_SYNC:vga_sync_instance|v_count[9] ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |camerainterface|SRAM_ADDR[11]                         ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 28 LEs               ; 7 LEs                  ; No         ; |camerainterface|SRAM_ADDR[19]                         ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |camerainterface|VGA_SYNC:vga_sync_instance|v_count[0] ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |camerainterface|SRAM_ADDR[7]                          ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 35 LEs               ; 7 LEs                  ; No         ; |camerainterface|SRAM_ADDR[13]                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
@@ -411,7 +391,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon May 26 23:12:56 2014
+    Info: Processing started: Tue May 27 19:01:17 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off camerainterface -c camerainterface
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
@@ -440,237 +420,206 @@ Info (12021): Found 2 design units, including 1 entities, in source file cam.vhd
     Info (12023): Found entity 1: cam
 Info (12127): Elaborating entity "camerainterface" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at camerainterface.vhd(30): used implicit default value for signal "VGA_SYNC_N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at camerainterface.vhd(119): object "camera_current_pixel" assigned a value but never read
-Warning (10541): VHDL Signal Declaration warning at camerainterface.vhd(126): used implicit default value for signal "sram8_low_bar_high" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(257): signal "pixel_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(258): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(262): signal "pixel_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(263): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(271): signal "bpixel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(271): signal "fpixel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(274): signal "diff" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(280): signal "pixel_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(281): signal "pixel_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(284): signal "pixel_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(296): signal "SW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(297): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(298): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(299): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10036): Verilog HDL or VHDL warning at camerainterface.vhd(120): object "camera_current_pixel" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at camerainterface.vhd(127): used implicit default value for signal "sram8_low_bar_high" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(258): signal "pixel_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(259): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(263): signal "pixel_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(264): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(269): signal "CLOCK_50" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(274): signal "bpixel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(274): signal "fpixel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(277): signal "diff" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(283): signal "pixel_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(287): signal "pixel_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(299): signal "SW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(300): signal "SW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(301): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at camerainterface.vhd(302): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at camerainterface.vhd(303): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(304): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(310): signal "SW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(318): signal "camera_column" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at camerainterface.vhd(326): signal "camera_column" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at camerainterface.vhd(249): inferring latch(es) for signal or variable "LEDR", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at camerainterface.vhd(249): inferring latch(es) for signal or variable "SRAM_ADDR", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at camerainterface.vhd(249): inferring latch(es) for signal or variable "bpixel", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at camerainterface.vhd(249): inferring latch(es) for signal or variable "fpixel", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at camerainterface.vhd(249): inferring latch(es) for signal or variable "diff", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at camerainterface.vhd(249): inferring latch(es) for signal or variable "sram_data_in", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at camerainterface.vhd(249): inferring latch(es) for signal or variable "pixel_counter", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at camerainterface.vhd(249): inferring latch(es) for signal or variable "backgroundsubtraction_eof", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at camerainterface.vhd(249): inferring latch(es) for signal or variable "VGA_R", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at camerainterface.vhd(249): inferring latch(es) for signal or variable "VGA_G", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at camerainterface.vhd(249): inferring latch(es) for signal or variable "VGA_B", which holds its previous value in one or more paths through the process
-Warning (10873): Using initial value X (don't care) for net "LEDR[17..5]" at camerainterface.vhd(40)
-Warning (10873): Using initial value X (don't care) for net "LEDR[2]" at camerainterface.vhd(40)
-Info (10041): Inferred latch for "VGA_B[0]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_B[1]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_B[2]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_B[3]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_B[4]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_B[5]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_B[6]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_B[7]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_G[0]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_G[1]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_G[2]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_G[3]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_G[4]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_G[5]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_G[6]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_G[7]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_R[0]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_R[1]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_R[2]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_R[3]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_R[4]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_R[5]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_R[6]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "VGA_R[7]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "backgroundsubtraction_eof" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[0]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[1]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[2]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[3]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[4]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[5]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[6]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[7]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[8]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[9]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[10]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[11]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[12]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[13]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[14]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[15]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[16]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[17]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[18]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[19]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[20]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[21]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[22]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[23]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[24]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[25]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[26]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[27]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[28]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[29]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "pixel_counter[30]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "sram_data_in[0]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "sram_data_in[1]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "sram_data_in[2]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "sram_data_in[3]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "sram_data_in[4]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "sram_data_in[5]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "sram_data_in[6]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "sram_data_in[7]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "sram_data_in[8]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "sram_data_in[9]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "sram_data_in[10]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "sram_data_in[11]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "sram_data_in[12]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "sram_data_in[13]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "sram_data_in[14]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "sram_data_in[15]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[0]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[1]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[2]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[3]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[4]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[5]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[6]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[7]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[8]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[9]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[10]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[11]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[12]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[13]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[14]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[15]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[16]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[17]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[18]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[19]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[20]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[21]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[22]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[23]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[24]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[25]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[26]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[27]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[28]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[29]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "diff[30]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[0]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[1]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[2]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[3]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[4]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[5]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[6]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[7]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[8]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[9]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[10]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[11]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[12]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[13]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[14]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[15]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[16]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[17]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[18]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[19]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[20]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[21]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[22]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[23]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[24]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[25]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[26]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[27]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[28]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[29]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "fpixel[30]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[0]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[1]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[2]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[3]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[4]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[5]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[6]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[7]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[8]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[9]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[10]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[11]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[12]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[13]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[14]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[15]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[16]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[17]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[18]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[19]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[20]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[21]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[22]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[23]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[24]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[25]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[26]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[27]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[28]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[29]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "bpixel[30]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "SRAM_ADDR[0]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "SRAM_ADDR[1]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "SRAM_ADDR[2]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "SRAM_ADDR[3]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "SRAM_ADDR[4]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "SRAM_ADDR[5]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "SRAM_ADDR[6]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "SRAM_ADDR[7]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "SRAM_ADDR[8]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "SRAM_ADDR[9]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "SRAM_ADDR[10]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "SRAM_ADDR[11]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "SRAM_ADDR[12]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "SRAM_ADDR[13]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "SRAM_ADDR[14]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "SRAM_ADDR[15]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "SRAM_ADDR[16]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "SRAM_ADDR[17]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "SRAM_ADDR[18]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "SRAM_ADDR[19]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "LEDR[3]" at camerainterface.vhd(249)
-Info (10041): Inferred latch for "LEDR[4]" at camerainterface.vhd(249)
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(306): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(307): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(308): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(312): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(313): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(314): signal "sram_data_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(321): signal "SW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(329): signal "camera_column" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(337): signal "camera_column" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camerainterface.vhd(353): signal "KEY" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at camerainterface.vhd(251): inferring latch(es) for signal or variable "SRAM_ADDR", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at camerainterface.vhd(251): inferring latch(es) for signal or variable "bpixel", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at camerainterface.vhd(251): inferring latch(es) for signal or variable "fpixel", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at camerainterface.vhd(251): inferring latch(es) for signal or variable "diff", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at camerainterface.vhd(251): inferring latch(es) for signal or variable "sram_data_in", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at camerainterface.vhd(251): inferring latch(es) for signal or variable "backgroundsubtraction_eof", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at camerainterface.vhd(251): inferring latch(es) for signal or variable "VGA_R", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at camerainterface.vhd(251): inferring latch(es) for signal or variable "VGA_G", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at camerainterface.vhd(251): inferring latch(es) for signal or variable "VGA_B", which holds its previous value in one or more paths through the process
+Warning (10873): Using initial value X (don't care) for net "LEDR[17..2]" at camerainterface.vhd(40)
+Info (10041): Inferred latch for "VGA_B[0]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_B[1]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_B[2]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_B[3]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_B[4]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_B[5]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_B[6]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_B[7]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_G[0]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_G[1]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_G[2]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_G[3]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_G[4]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_G[5]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_G[6]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_G[7]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_R[0]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_R[1]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_R[2]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_R[3]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_R[4]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_R[5]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_R[6]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "VGA_R[7]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "backgroundsubtraction_eof" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "sram_data_in[0]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "sram_data_in[1]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "sram_data_in[2]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "sram_data_in[3]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "sram_data_in[4]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "sram_data_in[5]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "sram_data_in[6]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "sram_data_in[7]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "sram_data_in[8]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "sram_data_in[9]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "sram_data_in[10]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "sram_data_in[11]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "sram_data_in[12]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "sram_data_in[13]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "sram_data_in[14]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "sram_data_in[15]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[0]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[1]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[2]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[3]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[4]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[5]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[6]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[7]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[8]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[9]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[10]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[11]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[12]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[13]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[14]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[15]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[16]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[17]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[18]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[19]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[20]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[21]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[22]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[23]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[24]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[25]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[26]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[27]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[28]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[29]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "diff[30]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[0]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[1]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[2]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[3]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[4]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[5]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[6]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[7]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[8]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[9]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[10]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[11]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[12]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[13]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[14]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[15]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[16]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[17]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[18]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[19]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[20]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[21]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[22]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[23]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[24]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[25]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[26]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[27]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[28]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[29]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "fpixel[30]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[0]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[1]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[2]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[3]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[4]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[5]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[6]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[7]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[8]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[9]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[10]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[11]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[12]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[13]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[14]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[15]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[16]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[17]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[18]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[19]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[20]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[21]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[22]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[23]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[24]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[25]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[26]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[27]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[28]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[29]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "bpixel[30]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "SRAM_ADDR[0]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "SRAM_ADDR[1]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "SRAM_ADDR[2]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "SRAM_ADDR[3]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "SRAM_ADDR[4]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "SRAM_ADDR[5]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "SRAM_ADDR[6]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "SRAM_ADDR[7]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "SRAM_ADDR[8]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "SRAM_ADDR[9]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "SRAM_ADDR[10]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "SRAM_ADDR[11]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "SRAM_ADDR[12]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "SRAM_ADDR[13]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "SRAM_ADDR[14]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "SRAM_ADDR[15]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "SRAM_ADDR[16]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "SRAM_ADDR[17]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "SRAM_ADDR[18]" at camerainterface.vhd(251)
+Info (10041): Inferred latch for "SRAM_ADDR[19]" at camerainterface.vhd(251)
 Warning (10665): Bidirectional port "GPIO[11]" at camerainterface.vhd(9) has a one-way connection to bidirectional port "GPIO[12]"
 Info (12128): Elaborating entity "leddcd" for hierarchy "leddcd:hex0decoder"
 Info (12128): Elaborating entity "cam" for hierarchy "cam:cam_instance"
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:vga_sync_instance"
 Info (12128): Elaborating entity "camstatemachine" for hierarchy "camstatemachine:camstatemachine_instance"
-Warning (10492): VHDL Process Statement warning at camstatemachine.vhd(31): signal "background_button" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at camstatemachine.vhd(32): signal "background_button" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at camstatemachine.vhd(116): signal "backgroundsubtraction_eof" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at camstatemachine.vhd(40): inferring latch(es) for signal or variable "image_select", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "image_select" at camstatemachine.vhd(40)
+Warning (10631): VHDL Process Statement warning at camstatemachine.vhd(41): inferring latch(es) for signal or variable "image_select", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "image_select" at camstatemachine.vhd(41)
 Info (10018): Can't recognize finite state machine "current_state" because it has a complex reset state
 Warning (14026): LATCH primitive "SRAM_ADDR[0]$latch" is permanently enabled
 Warning (14026): LATCH primitive "SRAM_ADDR[1]$latch" is permanently enabled
@@ -772,70 +721,6 @@ Warning (13012): Latch VGA_R[6]$latch has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|current_state.read_background_pixel
 Warning (13012): Latch VGA_R[7]$latch has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|current_state.read_background_pixel
-Warning (13012): Latch pixel_counter[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[6] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[7] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[8] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[9] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[10] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[11] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[12] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[13] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[14] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[15] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[16] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[17] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[18] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[19] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch backgroundsubtraction_eof has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[20] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[21] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[22] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[23] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[24] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[25] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[26] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[27] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[28] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[29] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
-Warning (13012): Latch pixel_counter[30] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|WideOr2
 Warning (13012): Latch sram_data_in[8] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal camstatemachine:camstatemachine_instance|current_state.read_background_pixel
 Warning (13012): Latch sram_data_in[9] has unsafe behavior
@@ -899,7 +784,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SRAM_UB_N" is stuck at GND
     Warning (13410): Pin "SRAM_OE_N" is stuck at GND
     Warning (13410): Pin "LEDR[2]" is stuck at GND
-    Warning (13410): Pin "LEDR[3]" is stuck at VCC
+    Warning (13410): Pin "LEDR[3]" is stuck at GND
     Warning (13410): Pin "LEDR[4]" is stuck at GND
     Warning (13410): Pin "LEDR[5]" is stuck at GND
     Warning (13410): Pin "LEDR[6]" is stuck at GND
@@ -918,10 +803,8 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 26 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 19 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[2]"
+Warning (21074): Design contains 17 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[3]"
-    Warning (15610): No output dependent on input pin "SW[1]"
     Warning (15610): No output dependent on input pin "SW[2]"
     Warning (15610): No output dependent on input pin "SW[3]"
     Warning (15610): No output dependent on input pin "SW[4]"
@@ -938,15 +821,15 @@ Warning (21074): Design contains 19 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[15]"
     Warning (15610): No output dependent on input pin "SW[16]"
     Warning (15610): No output dependent on input pin "SW[17]"
-Info (21057): Implemented 846 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 805 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 128 output pins
     Info (21060): Implemented 52 bidirectional pins
-    Info (21061): Implemented 643 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 284 warnings
-    Info: Peak virtual memory: 501 megabytes
-    Info: Processing ended: Mon May 26 23:12:58 2014
-    Info: Elapsed time: 00:00:02
+    Info (21061): Implemented 602 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 220 warnings
+    Info: Peak virtual memory: 517 megabytes
+    Info: Processing ended: Tue May 27 19:01:20 2014
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 

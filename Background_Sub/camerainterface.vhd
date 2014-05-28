@@ -82,7 +82,8 @@ port (
 	read_sram : out std_logic;
 	process_image : out std_logic;
 	image_select : out std_logic;
-	background_button : in std_logic
+	background_button : in std_logic;
+	result_image_switch : in std_logic
 
 );
 end component camstatemachine;
@@ -243,14 +244,14 @@ begin
 		read_sram,
 		process_image,
 		image_select,
-		KEY(1)
+		KEY(1),
+		SW(1)
 	);
 
 	process (read_sram, write_sram, vga_clock, vga_row, vga_column, camera_row, camera_current_pixel, camera_y_data, process_image, image_select) 
 	begin
 		if (process_image = '1') then  --Perfom background subtraction
 				if (read_sram = '1') then  --Read background and foreground pixels
-						
 						
 						--Read background pixel 
 						if (image_select = '0') then  
@@ -265,18 +266,22 @@ begin
 						
 				elsif (write_sram = '1') then  --Perform the subtraction
 						
+						if (rising_edge(CLOCK_50)) then	
+							pixel_counter <= pixel_counter + 1;  --go to the next pixel
+						end if;
+						
 						--Subtract pixels
 						diff <= abs(bpixel - fpixel); 
 						
 						--Threshold 
-						if (diff < 80) then	
+						if (diff < 130) then	
 							sram_data_in(15 downto 8) <= x"00";
 						else
 							sram_data_in(15 downto 8) <= x"FF";
 						end if;
 							
 						SRAM_ADDR <= std_logic_vector(to_unsigned( pixel_counter  + 614400 , 20));
-						pixel_counter <= pixel_counter + 1;  --go to the next pixel 
+						 
 						
 						--Check to see if gone through all the pixels
 						if (pixel_counter < 307200) then	
@@ -291,17 +296,25 @@ begin
 
 			if(read_sram = '1') then		
 			
-				if (SW(0) = '0') then
-						VGA_R <= sram_data_out(15 downto 8);
-						VGA_G <= sram_data_out(15 downto 8);
-						VGA_B <= sram_data_out(15 downto 8);
-						SRAM_ADDR <= std_logic_vector(to_unsigned(vga_row * 640 + vga_column, 20));
-				else
-				      VGA_R <= sram_data_out(15 downto 8);
-						VGA_G <= sram_data_out(15 downto 8);
-						VGA_B <= sram_data_out(15 downto 8);
-						SRAM_ADDR <= std_logic_vector(to_unsigned(vga_row * 640 + vga_column + 307200, 20));
-				end if;	
+				if (SW(1) = '0') then
+						if (SW(0) = '0') then
+								VGA_R <= sram_data_out(15 downto 8);
+								VGA_G <= sram_data_out(15 downto 8);
+								VGA_B <= sram_data_out(15 downto 8);
+								SRAM_ADDR <= std_logic_vector(to_unsigned(vga_row * 640 + vga_column, 20));
+						else
+								VGA_R <= sram_data_out(15 downto 8);
+								VGA_G <= sram_data_out(15 downto 8);
+								VGA_B <= sram_data_out(15 downto 8);
+								SRAM_ADDR <= std_logic_vector(to_unsigned(vga_row * 640 + vga_column + 307200, 20));
+						end if;	
+				else	
+								VGA_R <= sram_data_out(15 downto 8);
+								VGA_G <= sram_data_out(15 downto 8);
+								VGA_B <= sram_data_out(15 downto 8);
+								SRAM_ADDR <= std_logic_vector(to_unsigned(vga_row * 640 + vga_column + 614400, 20));
+						
+				end if;
 
 			elsif (write_sram = '1') then
 
@@ -324,8 +337,6 @@ begin
 					SRAM_ADDR <= std_logic_vector(to_unsigned(camera_row * 640 + camera_column + 307200, 20));
 					
 					--Set up for background subtraction
-						backgroundsubtraction_eof <= '0';
-						pixel_counter <= 0;
 					
 				end if;
 
@@ -336,6 +347,12 @@ begin
 				SRAM_ADDR <= (others => '0');
 			end if;
 		
+		end if;
+		
+		--Reset
+		if (KEY(2) = '0') then 
+				backgroundsubtraction_eof <= '0';
+				pixel_counter <= 0;
 		end if;
 		
 	end process;
@@ -355,7 +372,7 @@ begin
 	LEDR(0) <= process_image;
 	LEDR(1) <= backgroundsubtraction_eof;
 	
-
+	
 	num_x <= std_logic_vector(to_unsigned(camera_width, 16));
 	num_y <= std_logic_vector(to_unsigned(camera_height, 16));
 
