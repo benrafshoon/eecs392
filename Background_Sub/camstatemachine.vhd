@@ -41,7 +41,7 @@ begin
 	process (current_state, vga_eof, camera_eof)
 	begin
 		case current_state is  
-			
+
 			--State 2: Wait for end of VGA frame, continue to display image from SRAM
 			when wait_for_display_end_pre_copy =>
 				read_sram <= '1';
@@ -53,7 +53,7 @@ begin
 				else
 					next_state <= wait_for_display_end_pre_copy;
 				end if;
-				
+
 			--State 3: Wait for start of camera frame, display black image
 			when wait_for_cam_start => 
 				read_sram <= '0';
@@ -65,7 +65,7 @@ begin
 				else
 					next_state <= wait_for_cam_start;
 				end if;
-			
+
 			--State 4: Copy camera frame from camera to SRAM,
 			when copy1 => 
 				read_sram <= '0';
@@ -88,37 +88,37 @@ begin
 				else 
 					next_state <= copy2;
 				end if;
-				
+
 			--State 5: Read Background Image	for Background Subtraction
 			when read_background_pixel =>
 				read_sram <= '1';
 				write_sram <= '0';
 				process_image <= '1';
 				image_select <= '0';
-				
+
 				next_state <= read_foreground_pixel; 
-				
+
 			--State 6: Read Foreground Image for Background Subtraction 	
 			when read_foreground_pixel =>
 				read_sram <= '1';
 				write_sram <= '0';
 				process_image <= '1';
 				image_select <= '1';
-				
+
 				next_state <= write_processed_pixel;
-			
+
 			--State 7: Write processed image to SRAM 
 			when write_processed_pixel =>
 				read_sram <= '0';
 				write_sram <= '1';
 				process_image <= '1';
-				
+
 				if(backgroundsubtraction_eof = '1') then
 					next_state <= wait_for_display_end_post_copy;
 				else
 					next_state <= read_background_pixel;
 				end if;
-					
+
 			--State 8: Wait for beginning of next VGA frame, continue to display black image
 			when wait_for_display_end_post_copy => 
 				read_sram <= '0';
@@ -130,7 +130,7 @@ begin
 				else 
 					next_state <= wait_for_display_end_post_copy;
 				end if;
-			
+
 			--State 1: Display image from SRAM over VGA
 			when display =>
 				read_sram <= '1';
